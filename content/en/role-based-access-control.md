@@ -1,7 +1,6 @@
 ---
 title: Role-Based Access Control (RBAC)
 status: Completed
-category: concept
 tags: ["security", "", ""]
 ---
 

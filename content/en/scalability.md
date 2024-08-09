@@ -1,7 +1,6 @@
 ---
 title: Scalability
 status: Completed
-category: property
 tags: ["fundamental", "property", ""]
 ---
 

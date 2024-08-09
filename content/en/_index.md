@@ -1,9 +1,9 @@
 ---
-title: "Cloud Native Glossary"
+title: "Cloud Native Reference Architecture"
 status: Completed
 ---
 
-# Cloud Native Glossary
+# Cloud Native Reference Architecture
 
 The Cloud Native Glossary aims to make the cloud native space — which is notorious for its complexity — simpler for people by making it easier to understand, 
 not only for technologists but also for people on the business side. 

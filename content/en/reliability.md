@@ -1,7 +1,6 @@
 ---
 title: Reliability
 status: Completed
-category: property
 tags: ["fundamental", "property", ""]
 ---
 
