@@ -1,0 +1,12 @@
+
+.DS_Store
+.hugo_build.lock
+/public
+/resources
+node_modules/
+package-lock.json
+pagefind
+tmp/
+
+# Local Netlify folder
+.netlify
