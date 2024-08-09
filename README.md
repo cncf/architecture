@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8557b78f-eb69-4f1a-869f-75f2e222fdb9/deploy-status)](https://app.netlify.com/sites/cncfarchitecture/deploys)
+
 # Cloud Native Reference Architecture
 
 The [CNCF](https://www.cncf.io/) Cloud Native Reference Architecture site is hosted at [https://architecture.cncf.io/](https://architecture.cncf.io/) and is intended to be used as a reference for common cloud native architectures.
