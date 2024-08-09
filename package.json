@@ -1,6 +1,6 @@
 {
-  "name": "cncf-glossary",
-  "description": "CNCF Glossary.",
+  "name": "cncf-architecture",
+  "description": "CNCF Architecture.",
   "private": true,
   "scripts": {
     "__check:links": "make --keep-going check-links",

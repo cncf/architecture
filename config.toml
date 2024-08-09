@@ -58,7 +58,7 @@ title = "Cloud Native Architecture"
 # Weight used for sorting.
 weight = 1
 [languages.en.params]
-description = "The CNCF Cloud Native architecture Project is intended to be used as a reference for common terms used when talking about cloud native applications."
+description = "The CNCF Cloud Native Architecture site is intended to be used as a reference for common cloud native architectures."
 
 [markup]
 [markup.goldmark]

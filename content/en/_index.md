@@ -10,7 +10,7 @@ not only for technologists but also for people on the business side.
 To achieve that, we focus on simplicity (e.g., simple language free from buzzwords, examples anyone using technology can relate to, leaving unnecessary details out). 
 The Glossary is a project led by the CNCF Business Value Subcommittee (BVS). 
 
-<p><img class="mt-3" src="/images/homepage/kubecon.jpg" alt="People watching a Kubecon presentation"></p>
+<p><img class="mt-3" src="/images/homepage/stage.jpg" alt="People discussing diagrams on a conference stage"></p>
 
 ## Contributing
 
