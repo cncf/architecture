@@ -2,6 +2,18 @@
 	margin-bottom: 3rem;
 }
 
+.article-meta:after {
+	background: linear-gradient(180deg, #c4c4c4, hsla(0, 0%, 77%, 0));
+	content: "";
+	display: block;
+	height: 10px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	opacity: .15;
+	width: 100%;
+}
+
+
 .taxonomy-terms {
 	list-style: none;
 	margin: 0;
@@ -47,4 +59,17 @@
 .taxonomy-count {
 	padding-left: 0;
 	margin-left: 0;
+}
+
+.article-meta .post-meta {
+	margin-top: 20px;
+	font-size: 12px;
+	letter-spacing: 0.02em;
+	.row {
+		margin-bottom: 10px;
+		.meta-heading {
+			padding-left: 10px;
+			font-weight: 700;
+		}
+	}
 }
