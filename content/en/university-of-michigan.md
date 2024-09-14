@@ -25,6 +25,36 @@ tags:
 status: Completed
 ---
 
+## Relevant CNCF projects
+
+{{< cardpane >}}
+  {{< card header="Kubernetes" >}}
+  [![kubernetes logo](https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.svg)](https://www.cncf.io/projects/kubernetes/)
+  - **Using since:** 2016  
+  - **Current version:** 1.31  
+
+  Kubernetes has been a staple in our infrastrucutre. We've upgraded in place and have had a minimal amount of issues in the time that we've used it.
+  {{< /card >}}
+
+  {{< card header="Helm" >}}
+  [![helm logo](https://raw.githubusercontent.com/cncf/artwork/main/projects/helm/icon/color/helm-icon-color.svg)](https://www.cncf.io/projects/helm/)
+  - **Using since:** 2017  
+  - **Current version:** v3.14.0 
+
+  Helm works well for what it is. You need to watch how you use it and how you bring in 
+  dependencies since sprawl and overly configurable charts can quickly make something that was
+  easy to manage, to something very difficult
+  {{< /card >}}
+
+  {{< card header="Prometheus" >}}
+  [![prometheus logo](https://raw.githubusercontent.com/cncf/artwork/main/projects/prometheus/icon/color/prometheus-icon-color.svg)](https://www.cncf.io/projects/prometheus/)
+  - **Using since:** 2016  
+  - **Current version:** 1.31  
+
+  Prometheus has been a staple in our infrastrucutre. We've upgraded in place and have had a minimal amount of issues in the time that we've used it.
+  {{< /card >}}
+{{< /cardpane >}}
+
 ## Describe your organisation 
 
 The University of Michigan is one of the largest public research universities in the United States

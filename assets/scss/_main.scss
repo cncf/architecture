@@ -8,3 +8,31 @@ body {
 		padding-top: 9.5rem;
 	}
 }
+
+.card {
+	.card-header {
+		font-weight: 700;
+	}
+	.card-body {
+		font-size: 12px;
+		padding: 1rem;
+		img {
+			max-width: 170px;
+			display: block;
+			margin: 0 auto;
+			padding: 0;
+		}
+		ul {
+			padding-left: 0;
+			margin-bottom: 10px;
+		}
+		li {
+			list-style: none;
+			margin: 0 0 5px;
+			padding: 0;
+		}
+	}
+	.card-text {
+		display: none;
+	}
+}
