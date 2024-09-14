@@ -1,18 +1,6 @@
 .article-meta {
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
 }
-
-.article-meta:after {
-	background: linear-gradient(180deg, #c4c4c4, hsla(0, 0%, 77%, 0));
-	content: "";
-	display: block;
-	height: 10px;
-	margin-bottom: 40px;
-	margin-top: 40px;
-	opacity: .15;
-	width: 100%;
-}
-
 
 .taxonomy-terms {
 	list-style: none;
