@@ -22,6 +22,9 @@ tags:
 - higher-ed
 - private-cloud
 - public-cloud
+reference_architectures:
+- AI/ML/Batch
+- Big Data
 status: Completed
 ---
 

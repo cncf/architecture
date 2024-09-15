@@ -157,3 +157,4 @@ enable = false
 [taxonomies]
 industry = "industries"
 tag = "tags"
+reference_architecture = "reference_architectures"

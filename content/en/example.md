@@ -1,7 +1,10 @@
 ---
 title: Example Reference Arch
 status: Completed
-tags: ["kubernetes", "kueue", ""]
+date: 2024-07-20
+reference_architectures:
+- AI/ML/Batch
+- Secure CI/CD
 ---
 
 Opening blurb Opening blurb Opening blurb Opening blurb Opening blurb Opening blurb Opening blurb Opening blurb Opening blurb Opening blurb Opening blurb Opening blurb 

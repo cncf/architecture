@@ -26,11 +26,11 @@ other = "Tag"
 [ui_tags]
 other = "Tags"
 [ui_search_by_tags]
-other = "Browse by Tags"
+other = "Browse by Type"
 [ui_tags_intro]
-other = "We've categorized the glossary terms. Use the filters to browse terms by tag."
+other = "Browse all submitted architectures by reference architecture type."
 [ui_or_search_by_tags]
-other = "...or browse by tag"
+other = "...or browse by reference architecture"
 [ui_select_all]
 other = "Select All"
 [ui_deselect_all]
