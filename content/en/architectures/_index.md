@@ -1,5 +1,5 @@
 ---
-title: "Latest Architectures"
+title: "Latest architectures"
 toc_hide: true
 status: Completed
 menu:

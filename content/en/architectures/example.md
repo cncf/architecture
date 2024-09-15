@@ -1,5 +1,5 @@
 ---
-title: Example Reference Arch
+title: Example Arch
 status: Completed
 date: 2024-07-20
 reference_architectures:

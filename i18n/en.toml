@@ -28,7 +28,7 @@ other = "Tags"
 [ui_search_by_tags]
 other = "Latest architectures"
 [ui_tags_intro]
-other = "Filter by reference architecture:"
+other = "Filter by reference architecture"
 [ui_or_search_by_tags]
 other = "...or browse all"
 [ui_select_all]

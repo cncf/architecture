@@ -19,7 +19,7 @@
     
     {{ $glossary_items := (where .Site.Pages "Params.status" "Completed") | union (where .Site.Pages "Params.status" "completed") }}
     {{ with $glossary_items }}
-        {{ $glossary_terms := sort . "Title" "asc" }}
+        {{ $glossary_terms := sort . "Date" "desc" }}
         <div id="terms-by-tag">
             {{ range $glossary_terms }}
                 {{ $.Scratch.Set "tag_classes" "" }}
