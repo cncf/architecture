@@ -1,5 +1,5 @@
 ---
-title: How To Contribute
+title: About
 toc_hide: true
 status: Completed
 menu:

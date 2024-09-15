@@ -26,11 +26,11 @@ other = "Tag"
 [ui_tags]
 other = "Tags"
 [ui_search_by_tags]
-other = "Browse by Type"
+other = "Latest architectures"
 [ui_tags_intro]
-other = "Browse all submitted architectures by reference architecture type."
+other = "Filter by reference architecture:"
 [ui_or_search_by_tags]
-other = "...or browse by reference architecture"
+other = "...or browse all"
 [ui_select_all]
 other = "Select All"
 [ui_deselect_all]
