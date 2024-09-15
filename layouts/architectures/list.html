@@ -31,11 +31,7 @@
                 
                 <div class="{{ $.Scratch.Get "tag_classes" }} hide" data-show-count="0">
                     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                    <div>
-                        <p>
-                        Submitted: {{ .Date.Format ($.Param "time_format_default") }}
-                        </p>
-                    </div>
+                    {{ partial "arch-meta.html" . }}
                 </div>
             {{ end }}
         </div>
