@@ -5,6 +5,10 @@
         <div class="col">{{ .Date.Format ($.Param "time_format_default") }}</div>
     </div>
     <div class="row">
+        <div class="col-2 meta-heading">Updated:</div>
+        <div class="col">{{ .Lastmod.Format ($.Param "time_format_default") }}</div>
+    </div>
+    <div class="row">
         {{ partial "taxonomy_cats_article.html" (dict "context" $context "taxo" "industries" ) }}
     </div>
     <div class="row">
@@ -30,6 +34,16 @@
     <div class="row">
         <div class="col-2 meta-heading">Team:</div>
         <div class="col">{{ . }}</div>
+    </div>
+    {{ end }}
+    {{ if isset .Params "contact" }}
+    <div class="row">
+        <div class="col-2 meta-heading">Contact:</div>
+        {{ if isset .Params "email" }}
+            <div class="col"><a href="mailto:{{ .Params.email }}">{{ .Params.contact }}</a></div>
+        {{ else }}
+            <div class="col">{{ .Params.contact }}</div>
+        {{ end }}
     </div>
     {{ end }}
 </div>

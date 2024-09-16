@@ -4,6 +4,7 @@ date: 2024-08-29
 org_name: University of Michigan
 org_team: Advanced Research Computing
 org_url: https://arc-ts.umich.edu
+contact: Bob Killen
 email: killen.bob@gmail.com
 org_description: |
   Advanced Research Computing provides research computing resources to The University of Michigan
