@@ -61,6 +61,7 @@
     line-height: 120%;
     text-align: center;
     letter-spacing: 0.02em;
+    white-space: nowrap;
     // Turn pink when selected is-active.
     &.is-active {
         background-color: $link-color;
