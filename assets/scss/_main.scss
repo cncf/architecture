@@ -4,6 +4,7 @@ body {
 
 // Align main content on desktop.
 .td-main main {
+	padding-top: 3rem;
 	@media (min-width: 768px) {
 		padding-top: 9.5rem;
 	}

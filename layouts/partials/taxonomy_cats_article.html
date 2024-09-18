@@ -3,7 +3,7 @@
 {{ $terms := $context.GetTerms $taxo }}
 {{ $lastIndex := sub (len $terms) 1 }}
 {{ if (gt (len $terms) 0) }}
-<div class="col-2 meta-heading">
+<div class="col-3 col-md-2 meta-heading">
   {{ title $taxo }}:
 </div>
 <div class="col">					

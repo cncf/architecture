@@ -1,11 +1,11 @@
 {{ $context := . }}
 <div class="container-fluid post-meta">
     <div class="row">
-        <div class="col-2 meta-heading">Submitted:</div>
+        <div class="col-3 col-md-2 meta-heading">Submitted:</div>
         <div class="col">{{ .Date.Format ($.Param "time_format_default") }}</div>
     </div>
     <div class="row">
-        <div class="col-2 meta-heading">Updated:</div>
+        <div class="col-3 col-md-2 meta-heading">Updated:</div>
         <div class="col">{{ .Lastmod.Format ($.Param "time_format_default") }}</div>
     </div>
     <div class="row">
@@ -16,7 +16,7 @@
     </div>
     {{ if isset .Params "org_name" }}
     <div class="row">
-        <div class="col-2 meta-heading">Organization:</div>
+        <div class="col-3 col-md-2 meta-heading">Organization:</div>
         {{ if isset .Params "org_url" }}
             <div class="col"><a href="{{ .Params.org_url }}">{{ .Params.org_name }}</a></div>
         {{ else }}
@@ -26,19 +26,19 @@
     {{ end }}
     {{ with .Params.org_size }}
     <div class="row">
-        <div class="col-2 meta-heading">Org Size:</div>
+        <div class="col-3 col-md-2 meta-heading">Org Size:</div>
         <div class="col">{{ . }}</div>
     </div>
     {{ end }}
     {{ with .Params.org_team }}
     <div class="row">
-        <div class="col-2 meta-heading">Team:</div>
+        <div class="col-3 col-md-2 meta-heading">Team:</div>
         <div class="col">{{ . }}</div>
     </div>
     {{ end }}
     {{ if isset .Params "contact" }}
     <div class="row">
-        <div class="col-2 meta-heading">Contact:</div>
+        <div class="col-3 col-md-2 meta-heading">Contact:</div>
         {{ if isset .Params "email" }}
             <div class="col"><a href="mailto:{{ .Params.email }}">{{ .Params.contact }}</a></div>
         {{ else }}
