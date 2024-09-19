@@ -8,9 +8,18 @@
     padding-bottom: 6rem;
 }
 
+.td-content .tags-intro {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    line-height: 125%;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
 // Tags container.
 .canonical-tag-container {
-    margin-top: 1.5625rem;
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
     gap: 20px;
@@ -18,7 +27,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
     }
     @media (max-width: 767px) {
         > span {
@@ -52,6 +61,7 @@
     line-height: 120%;
     text-align: center;
     letter-spacing: 0.02em;
+    white-space: nowrap;
     // Turn pink when selected is-active.
     &.is-active {
         background-color: $link-color;
@@ -99,11 +109,12 @@
 // Results
 #terms-by-tag {
     margin-top: 1rem;
+    margin-bottom: 3rem;
     > div {
         margin-top: 2.5rem;
     }
     h3 {
-        margin-top: 2.5rem;
+        margin-top: 3rem;
         margin-bottom: 1rem;
         a {
             color: black;

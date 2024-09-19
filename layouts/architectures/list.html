@@ -1,16 +1,16 @@
 {{ define "main" }}
 <div class="td-content">
-    <h1>{{ title ( T "ui_search_by_tags" ) }}</h1>
+    <h1>{{ ( T "ui_search_by_tags" ) }}</h1>
 
-    <p>{{ ( T "ui_tags_intro" ) }}</p>
+    <p class="tags-intro">{{ ( T "ui_tags_intro" ) }}</p>
 
     <script src="{{ "js/tag-search.js" | relURL }}"></script>
 
-    {{ $tags := index .Site.Taxonomies "tags" }}
+    {{ $tags := index .Site.Taxonomies "reference_architectures" }}
 
     <div class="canonical-tag-container">
         {{ range $tags }}
-            {{ $tagid := printf "tag-%s" ( replace .Page.Title " " "-" ) }}
+            {{ $tagid := printf "tag-%s" ( replace .Page.Title "/" " " | urlize ) }}
             <button id="{{ $tagid  }}" class="canonical-tag" data-target="{{ $tagid  }}">{{ title .Page.Title }}</button>
         {{ end }}
         <span><button class="button-reset-to-text" id="select-all-tags">{{ T "ui_select_all" }}</button></span>
@@ -19,23 +19,19 @@
     
     {{ $glossary_items := (where .Site.Pages "Params.status" "Completed") | union (where .Site.Pages "Params.status" "completed") }}
     {{ with $glossary_items }}
-        {{ $glossary_terms := sort . "Title" "asc" }}
+        {{ $glossary_terms := sort . "Date" "desc" }}
         <div id="terms-by-tag">
             {{ range $glossary_terms }}
                 {{ $.Scratch.Set "tag_classes" "" }}
-                {{ range .Params.tags }}
-                    {{ with . }}
-                        {{ $.Scratch.Add "tag_classes" (printf "tag-%s " ( replace . " " "-" ) )  }}
+                {{ with .GetTerms "reference_architectures" }}
+                    {{ range . }}
+                        {{ $.Scratch.Add "tag_classes" (printf "tag-%s " ( replace .LinkTitle "/" " " | urlize ) )  }}
                     {{ end }}
                 {{ end }}
                 
                 <div class="{{ $.Scratch.Get "tag_classes" }} hide" data-show-count="0">
                     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                    <div>
-                        <p>
-                        {{ replace ( .Summary | markdownify ) "What it is" "" }}..
-                        </p>
-                    </div>
+                    {{ partial "arch-meta.html" . }}
                 </div>
             {{ end }}
         </div>

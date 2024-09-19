@@ -1,10 +1,10 @@
 ---
-title: How To Contribute
+title: How to submit
 toc_hide: true
 status: Completed
 menu:
   main:
-    weight: 10
+    weight: 30
 ---
 
 ## Welcome 

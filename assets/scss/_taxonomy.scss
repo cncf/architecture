@@ -1,5 +1,5 @@
 .article-meta {
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
 }
 
 .taxonomy-terms {
@@ -47,4 +47,17 @@
 .taxonomy-count {
 	padding-left: 0;
 	margin-left: 0;
+}
+
+.post-meta {
+	margin-top: 20px;
+	font-size: 12px;
+	letter-spacing: 0.02em;
+	.row {
+		margin-bottom: 10px;
+		.meta-heading {
+			padding-left: 10px;
+			font-weight: 700;
+		}
+	}
 }

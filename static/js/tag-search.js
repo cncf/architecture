@@ -135,7 +135,7 @@ $( document ).ready(function() {
     };
   
     function initActiveTags() {
-      if (activeTags[selectAllKey]) {
+      if (activeTags[selectAllKey] || activeTags[""]) {
         $("#select-all-tags").click();
       } else if (activeTags[deselectAllKey]) {
         $("#deselect-all-tags").click();
