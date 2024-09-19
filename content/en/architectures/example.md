@@ -47,3 +47,53 @@ sequenceDiagram
     Docsy user->>Discussion board: Mark question as resolved
     Docsy user->>Docsy user: Being happy
 ```
+
+## What value/impact per stakeholder did you deliver?
+
+### **Business**  
+  - Cost savings of $2.4m
+  - Business Delivery expedited by 500%
+  - Security incidents reduced by 50%
+  - Reliability incidents reduced by 90%
+  - Organizational Performance increased by 5x
+
+### **End-Customers**  
+  - User Experience
+  - Fast Feedback loop
+  - Reliability
+
+### **Developers**  
+  - DevX
+  - Fast Software Delivery
+  - Productivity
+  - High Quality
+  - Innovation
+
+### **Security**  
+  - Cloud native Security
+  - devSecOps
+  - Observability
+  - SupplyChain-SBOM
+
+### **Compliance**  
+  - Cloud compliance
+  - IaC
+  - CaC
+  - gitops
+  - OPA-as-Enterprise-Policies
+  - Documentation
+
+### **Legal**  
+  - FOSS-SBOM
+
+### **QA**  
+  - Automation
+  - Quality gates
+  - Shift-Left
+  - SRE-QA
+  - CICD
+
+### **FinOps/Sustainability**  
+  - Observability
+  - SRE-FinOps
+  - Cloud-Architecture
