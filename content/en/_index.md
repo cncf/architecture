@@ -5,47 +5,35 @@ status: Completed
 
 # Cloud Native Reference Architecture
 
-The Cloud Native Glossary aims to make the cloud native space — which is notorious for its complexity — simpler for people by making it easier to understand, 
-not only for technologists but also for people on the business side. 
-To achieve that, we focus on simplicity (e.g., simple language free from buzzwords, examples anyone using technology can relate to, leaving unnecessary details out). 
-The Glossary is a project led by the CNCF Business Value Subcommittee (BVS). 
+Cloud computing, which we can think of as demand-driven delivery of IT resources over the network as distinct from statically delivered physical resources, allows and encourages changes in the way we deliver software. What, precisely, those changes are is not a settled question, and can lead to uncertainty when we try to design for the cloud from the ground up.
+
+This site is opinionated about what "cloud native" means, but not about what technologies you use to deliver that vision. Here we define what we mean by "cloud native", and the associated examples show real-life architectures, used in major production settings, that implement some or all of these principles. Examples also include the story of how they came to be to give you the organizational context essential to understanding the architecture.
+
+To take advantage of cloud computing an applications should be:
+
+- Distributable, such that applications are built as loosely coupled services, each of which performs a single function. This supports horizontal scalability.
+- Observable, such that requests crossing multiple services can be tracked through built-in monitoring, tracing and logging features to improve system understanding and reliability.
+- Portable, such that applications can take full advantage of cloud computing by not being tied to specific vendors or implementations.
+- Interoperable, such that services expose their functionality through APIs, allowing easy integration throughout the system.
+- Available, such that failure in a service is handled gracefully with minimal disruption to the application as a whole.
+
+The Reference Architecture site is a project led by the [CNCF End User Technical Advisory Board](https://www.cncf.io/people/end-user-technical-advisory-board/).
 
 <p><img class="mt-3" src="/images/homepage/stage.jpg" alt="People discussing diagrams on a conference stage"></p>
 
 ## Contributing
 
-Everybody is invited to suggest changes, additions, and improvements to the Cloud Native Glossary. 
-We employ a community-driven process governed by the CNCF to develop and improve upon this shared lexicon. 
-This Glossary provides a vendor-neutral platform to organize a shared vocabulary around cloud native technologies. 
+Everybody is invited to suggest changes, additions, and improvements to the Cloud Native Reference Architecture site. 
+We employ a community-driven process governed by the CNCF to develop and improve upon this shared reference.
 Contributions are welcome from all participants who abide by the project's purpose and charter.
 
 Anyone wishing to contribute may submit a GitHub issue or create a pull request.
-Please ensure you follow the [Style Guide](/style-guide/), read the [How To Contribute](/contribute/) doc, join the [CNCF Slack](https://communityinviter.com/apps/cloud-native/cncf) workspace, and join the [#glossary](https://cloud-native.slack.com/archives/C02TX20MQBB) channel.
-There is also a [#glossary-localizations](https://cloud-native.slack.com/archives/C02N2RGFXDF) channel for those who want to help translate the glossary into their native language.
+Please ensure you follow the [Style Guide](/style-guide/), read the [How To Contribute](/contribute/) doc, join the [CNCF Slack](https://communityinviter.com/apps/cloud-native/cncf) workspace, and join the [#reference-architectures](https://cloud-native.slack.com/archives/C07JCV4CQD9) channel.
 
 ## Acknowledgements
 
-The Cloud Native Glossary was initiated by the CNCF Marketing Committee (Business Value Subcommittee) and includes contributions from 
-[Catherine Paganini](https://www.linkedin.com/in/catherinepaganini/en/), 
-[Chris Aniszczyk](https://www.linkedin.com/in/caniszczyk/), 
-[Daniel Jones](https://www.linkedin.com/in/danieljoneseb/?originalSubdomain=uk), 
-[Jason Morgan](https://www.linkedin.com/in/jasonmorgan2/), 
-[Katelin Ramer](https://www.linkedin.com/in/katelinramer/), 
-[Mike Foster](https://www.linkedin.com/in/mfosterche/?originalSubdomain=ca), 
-and many more contributors. 
-For a complete contributor list, please refer to [this GitHub page](https://github.com/cncf/glossary/graphs/contributors).
-
-The Glossary is maintained by 
-[Seokho Son](https://www.linkedin.com/in/seokho-son/),
-[Noah Ispas](https://www.linkedin.com/in/noah-ispas-0665b42a/), 
-[Jihoon Seo](https://www.linkedin.com/in/jihoon-seo/),
-[Nate W.](https://www.linkedin.com/in/nate-double-u/),
-and [Jorge Castro](https://www.linkedin.com/in/jorge-castro2112/).
-
-[Catherine Paganini](https://www.linkedin.com/in/catherinepaganini/en/),
-and [Jason Morgan](https://www.linkedin.com/in/jasonmorgan2/)
-are Emeritus Maintainers, and we are deeply grateful
-for their invaluable contributions over the years.
+The Cloud Native Reference Architecture site was initiated by the [CNCF End User Technical Advisory Board](https://www.cncf.io/people/end-user-technical-advisory-board/).
+For a complete contributor list, please refer to [this GitHub page](https://github.com/cncf/architecture/graphs/contributors).
 
 ## License
 
