@@ -8,12 +8,8 @@
         <div class="col-3 col-md-2 meta-heading">Updated:</div>
         <div class="col">{{ .Lastmod.Format ($.Param "time_format_default") }}</div>
     </div>
-    <div class="row">
-        {{ partial "taxonomy_cats_article.html" (dict "context" $context "taxo" "industries" ) }}
-    </div>
-    <div class="row">
-        {{ partial "taxonomy_cats_article.html" (dict "context" $context "taxo" "tags" ) }}
-    </div>
+    {{ partial "taxonomy_cats_article.html" (dict "context" $context "taxo" "industries" ) }}
+    {{ partial "taxonomy_cats_article.html" (dict "context" $context "taxo" "tags" ) }}
     {{ if isset .Params "org_name" }}
     <div class="row">
         <div class="col-3 col-md-2 meta-heading">Organization:</div>

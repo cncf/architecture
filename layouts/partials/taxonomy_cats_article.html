@@ -3,6 +3,7 @@
 {{ $terms := $context.GetTerms $taxo }}
 {{ $lastIndex := sub (len $terms) 1 }}
 {{ if (gt (len $terms) 0) }}
+<div class="row">
 <div class="col-3 col-md-2 meta-heading">
   {{ title $taxo }}:
 </div>
@@ -10,5 +11,6 @@
   {{ range $index, $term := $terms }}
     {{ title $term.LinkTitle }}{{ if lt $index $lastIndex }},{{ end }}
   {{ end }}
+</div>
 </div>
 {{ end }}
