@@ -1,6 +1,5 @@
 ---
 title: Example Arch
-status: Completed
 date: 2024-07-20
 org_name: University of Michigan
 org_team: Advanced Research Computing

@@ -17,7 +17,7 @@
         <span><button class="button-reset-to-text" id="deselect-all-tags">{{ T "ui_deselect_all" }}</button></span>
     </div>
     
-    {{ $glossary_items := (where .Site.Pages "Params.status" "Completed") | union (where .Site.Pages "Params.status" "completed") }}
+    {{ $glossary_items := .Site.Pages }}
     {{ with $glossary_items }}
         {{ $glossary_terms := sort . "Date" "desc" }}
         <div id="terms-by-tag">

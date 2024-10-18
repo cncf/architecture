@@ -1,6 +1,5 @@
 ---
 title: "Cloud Native Reference Architecture"
-status: Completed
 ---
 
 # Cloud Native Reference Architecture

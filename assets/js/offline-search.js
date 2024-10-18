@@ -57,13 +57,11 @@
                     this.field('body');
 
                     data.forEach((doc) => {
-                        if ( 'completed' == doc.status.toLowerCase() ) {
-                            this.add(doc);
-                            resultDetails.set(doc.ref, {
-                                title: doc.title,
-                                excerpt: doc.excerpt,
-                            });
-                        }
+                        this.add(doc);
+                        resultDetails.set(doc.ref, {
+                            title: doc.title,
+                            excerpt: doc.excerpt,
+                        });
                     });
                 });
 

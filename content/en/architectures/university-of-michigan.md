@@ -26,7 +26,6 @@ tags:
 reference_architectures:
 - AI/ML/Batch
 - Big Data
-status: Completed
 ---
 
 ## Relevant CNCF projects

@@ -1,7 +1,6 @@
 ---
 title: About
 toc_hide: true
-status: Completed
 menu:
   main:
     weight: 40

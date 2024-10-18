@@ -3,7 +3,7 @@
   <h1 class="thin mb-5 pb-3">{{ humanize ( T "ui_tag" ) }}: <span>{{title .Title }}</span></h1>
   {{ .Content }}
     <div class="articles-of-tag">
-      {{ $pages := (where .Pages ".Params.status" "Completed") | union (where .Pages ".Params.status" "completed") -}}
+      {{ $pages := .Pages -}}
       {{ range sort $pages ".Title" }}
         {{ $manualLink := cond (isset .Params "manuallink") .Params.manualLink ( cond (isset .Params "manuallinkrelref") (relref . .Params.manualLinkRelref) .RelPermalink) }}
         <article class="article-teaser article-type-{{ with .Type }}{{ ( urlize . ) }}{{ end }}">

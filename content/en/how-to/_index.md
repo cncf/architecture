@@ -1,7 +1,6 @@
 ---
 title: How to submit
 toc_hide: true
-status: Completed
 menu:
   main:
     weight: 30

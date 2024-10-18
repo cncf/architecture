@@ -7,9 +7,8 @@
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 
-{{ $completed_status := or (eq .Params.status "Completed") (eq .Params.status "completed") }}
 
-{{ if and hugo.IsProduction (ne $outputFormat "print") $completed_status -}}
+{{ if and hugo.IsProduction (ne $outputFormat "print") -}}
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 {{ else -}}
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
