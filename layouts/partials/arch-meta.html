@@ -1,45 +1,59 @@
 {{ $context := . }}
-<div class="container-fluid post-meta">
-    <div class="row">
-        <div class="col-3 col-md-2 meta-heading">Submitted:</div>
-        <div class="col">{{ .Date.Format ($.Param "time_format_default") }}</div>
+<div class="row">
+    <div class="col-lg">
+        <div class="container-fluid post-meta">
+            <div class="row">
+                <div class="col-3 col-md-2 meta-heading">Submitted:</div>
+                <div class="col">{{ .Date.Format ($.Param "time_format_default") }}</div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-md-2 meta-heading">Updated:</div>
+                <div class="col">{{ .Lastmod.Format ($.Param "time_format_default") }}</div>
+            </div>
+            {{ partial "taxonomy_cats_article.html" (dict "context" $context "taxo" "industries" ) }}
+            {{ partial "taxonomy_cats_article.html" (dict "context" $context "taxo" "tags" ) }}
+            {{ $org_name := ""}}
+            {{ if isset .Params "org_name" }}
+            {{ $org_name := .Params.org_name }}
+            <div class="row">
+                <div class="col-3 col-md-2 meta-heading">Organization:</div>
+                {{ if isset .Params "org_url" }}
+                    <div class="col"><a href="{{ .Params.org_url }}">{{ .Params.org_name }}</a></div>
+                {{ else }}
+                    <div class="col">{{ .Params.org_name }}</div>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ with .Params.org_size }}
+            <div class="row">
+                <div class="col-3 col-md-2 meta-heading">Org Size:</div>
+                <div class="col">{{ . }}</div>
+            </div>
+            {{ end }}
+            {{ with .Params.org_team }}
+            <div class="row">
+                <div class="col-3 col-md-2 meta-heading">Team:</div>
+                <div class="col">{{ . }}</div>
+            </div>
+            {{ end }}
+            {{ if isset .Params "contact" }}
+            <div class="row">
+                <div class="col-3 col-md-2 meta-heading">Contact:</div>
+                {{ if isset .Params "email" }}
+                    <div class="col"><a href="mailto:{{ .Params.email }}">{{ .Params.contact }}</a></div>
+                {{ else }}
+                    <div class="col">{{ .Params.contact }}</div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
     </div>
-    <div class="row">
-        <div class="col-3 col-md-2 meta-heading">Updated:</div>
-        <div class="col">{{ .Lastmod.Format ($.Param "time_format_default") }}</div>
-    </div>
-    {{ partial "taxonomy_cats_article.html" (dict "context" $context "taxo" "industries" ) }}
-    {{ partial "taxonomy_cats_article.html" (dict "context" $context "taxo" "tags" ) }}
-    {{ if isset .Params "org_name" }}
-    <div class="row">
-        <div class="col-3 col-md-2 meta-heading">Organization:</div>
-        {{ if isset .Params "org_url" }}
-            <div class="col"><a href="{{ .Params.org_url }}">{{ .Params.org_name }}</a></div>
-        {{ else }}
-            <div class="col">{{ .Params.org_name }}</div>
+    {{ if isset .Params "org_logo_filename" }}
+        {{ $org_logo_filename := .Params.org_logo_filename }}
+        {{ with .Resources.GetMatch $org_logo_filename }}
+        <div class="col-lg">
+            <img src="{{ .Permalink }}" class="img-fluid company-logo" alt="{{ $org_name }}">
+        </div>  
         {{ end }}
-    </div>
-    {{ end }}
-    {{ with .Params.org_size }}
-    <div class="row">
-        <div class="col-3 col-md-2 meta-heading">Org Size:</div>
-        <div class="col">{{ . }}</div>
-    </div>
-    {{ end }}
-    {{ with .Params.org_team }}
-    <div class="row">
-        <div class="col-3 col-md-2 meta-heading">Team:</div>
-        <div class="col">{{ . }}</div>
-    </div>
-    {{ end }}
-    {{ if isset .Params "contact" }}
-    <div class="row">
-        <div class="col-3 col-md-2 meta-heading">Contact:</div>
-        {{ if isset .Params "email" }}
-            <div class="col"><a href="mailto:{{ .Params.email }}">{{ .Params.contact }}</a></div>
-        {{ else }}
-            <div class="col">{{ .Params.contact }}</div>
-        {{ end }}
-    </div>
     {{ end }}
 </div>
