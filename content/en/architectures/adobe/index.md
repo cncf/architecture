@@ -20,8 +20,7 @@ tags:
 - developer-platforms
 - developer-experience
 reference_architectures:
-- 
-status: In Progress
+- CI/CD
 ---
 
 ## Relevant CNCF projects
