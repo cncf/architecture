@@ -53,7 +53,6 @@ status: In Progress
   - Argo Events: v1.9.0
   - Argo Rollouts v1.6.0
   {{< /card >}}
-  {{< /cardpane >}}
 
   {{< card header="Backstage" >}}
   [![helm logo](https://raw.githubusercontent.com/cncf/artwork/main/projects/backstage/icon/color/backstage-icon-color.svg)](https://www.cncf.io/projects/backstage/)
@@ -62,6 +61,7 @@ status: In Progress
 
   Backstage is the backbone for our unified internal developer portal.
   {{< /card >}}
+{{< /cardpane >}}
 
 ## Developer Platforms @ Adobe
 Adobe has been working on building an Internal Developer Platform (IDP) for the past several years. We have a core infrastructure layer which offers a compute layer on top of cloud providers such as AWS and Azure. On top of the infrastructure layer, we provide an end-to-end developer experience which helps developers in different phases of SDLC.
