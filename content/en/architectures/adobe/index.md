@@ -4,14 +4,17 @@ date: 2024-10-11
 org_name: Adobe
 org_team: Developer Platforms
 org_url: https://www.adobe.com/
+org_logo_filename: ./images/Adobe_Wordmark_RGB_Red.svg
 contact: Vikram Sethi
 email: vik.set@gmail.com
 org_description: |
-
+  Adobe is the global leader in digital experience and digital media solutions. Our tools and services allow our customers to create groundbreaking digital content, deploy it across media and devices, measure and optimize it over time and achieve greater business success. We help our customers make, manage, measure and monetize their content across every channel and screen.
 org_size:  10,000+
 user_size:  14,000+
 industries:
-- 
+- Software
+- Digital Media
+- Digital Experience
 tags:
 - adobe
 - ci-cd
@@ -21,6 +24,11 @@ tags:
 - developer-experience
 reference_architectures:
 - CI/CD
+- Service Delivery
+- Cell-based Architecture
+- Scaling
+- Adobe
+- GitOps
 ---
 
 ## Relevant CNCF projects
