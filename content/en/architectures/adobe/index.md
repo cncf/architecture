@@ -4,7 +4,7 @@ date: 2024-10-11
 org_name: Adobe
 org_team: Developer Platforms
 org_url: https://www.adobe.com/
-org_logo_filename: ./images/Adobe_Wordmark_RGB_Red.svg
+org_logo_filename: images/Adobe_Wordmark_RGB_Red.svg
 contact: Vikram Sethi
 email: vik.set@gmail.com
 org_description: |
