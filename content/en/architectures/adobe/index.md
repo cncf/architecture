@@ -92,10 +92,10 @@ Adobe offers a rich developer experience to its developers to enable them to wri
 - **Control Plane** – The control plane for the service delivery workflow is based on AWS EKS clusters.
 
 Flex has had rapid organic growth in the last 2 years since its launch. Here are some numbers that represent the scale that we are handling (as of Oct 2024): 
-- $>$ 360 remote K8s clusters
-- $>$ 22K Argo CD apps
-- $>$ 30K deployments per month
-- $>$ 1K services in production
+- &gt; 360 remote K8s clusters
+- &gt; 22K Argo CD apps
+- &gt; 30K deployments per month
+- &gt; 1K services in production
 
 And these numbers are increasing by the day.
 
