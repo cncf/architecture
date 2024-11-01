@@ -8,36 +8,20 @@ menu:
 
 ## Welcome 
 
-Welcome to the Cloud Native Glossary contributing guide, and thank you for your interest. 
-There are a number of ways you can contribute to this project, which we'll cover in detail here: 
+Welcome to the Cloud Native Reference Architecture contributing guide, and thank you for your interest. 
 
-1) [Work on an existing issue](#work-on-an-existing-issue)
-2) [Propose new terms](#propose-new-terms)
-3) [Update existing ones](#update-an-existing-term)
-4) [Localize the glossary](#help-localize-the-glossary)
+## CNCF Reference Architecture overview 
 
-## CNCF glossary overview 
+The goal of this site is to show real-life examples of successful cloud native architectures in order to make good choices easier to find. 
 
-The goal of this glossary is to simplify the cloud native space — which is notorious for its complexity — and thus make it more accessible to people. 
-
-The Cloud Native Glossary content is stored in [this GitHub repo](https://github.com/cncf/glossary) 
-where you'll find a list of [issues](https://github.com/cncf/glossary/issues), pull requests ([PRs](https://github.com/cncf/glossary/pulls)), and 
-[discussions](https://github.com/cncf/glossary/discussions) about the glossary. 
+The Cloud Native Reference Architecture content is stored in [this GitHub repo](https://github.com/cncf/architecture) 
+where you'll find a list of [issues](https://github.com/cncf/architecture/issues), pull requests ([PRs](https://github.com/cncf/architecture/pulls)), and 
+[discussions](https://github.com/cncf/architecture/discussions) about the site. 
 
 ## Who can contribute?
 
-How you can participate in this project depends on your level of cloud native expertise. 
-Simplifying complex concepts requires a deep knowledge of the topic. 
-Therefore, to contribute new terms, you must be proficient in them. 
-Contributors are typically engineers who have worked with these technologies for some time or academics focused on cloud native. 
+Given the nature of the content we are only accepting PRs from CNCF members at this time. This will be verified during the PR approval process.
 
-That know-how is required because explaining complex concepts in simple words is _really_ hard. And while the digestible, user-friendly outcome may seem easy, achieving the desired simplicity results from hard work and collaboration between cloud native experts. 
-
-If you are not a cloud native expert yet but still want to contribute, we recommend teaming up with someone who is. 
-Once the expert is confident that the term accurately describes the concept, you are ready for your first Glossary contribution.
-
-The localization effort is where beginners proficient in another language can make valuable contributions to the Glossary. 
-With solid existing definitions in English, less experienced contributors can localize terms to a target language. You can join an existing localization team or create a new one. Read this guide's [Help Localize the glossary](#help-localize-the-glossary) section to learn how to get started. 
 
 ## Before you start
 
@@ -59,16 +43,16 @@ And when naming .md files, please use lowercase letters and hyphens instead of s
 
 Read our [Style Guide](/style-guide/) to understand our guidelines for formatting and writing documents and make the contribution process more efficient. 
 
-## Join the Glossary community! {#join-the-glossary-community}
+## Join the Reference Architectures community! {#join-the-reference-architectures-community}
 
 If you want to contribute regularly, consider joining our monthly Glossary Working Group meetings. 
 You can find the meeting details in the [CNCF calendar](https://www.cncf.io/calendar/). 
-You can also connect with the maintainers and fellow contributors in our [#glossary](https://cloud-native.slack.com/archives/C02TX20MQBB) channel on the CNCF Slack 
+You can also connect with the maintainers and fellow contributors in our [#reference-architectures](https://cloud-native.slack.com/archives/C07JCV4CQD9) channel on the CNCF Slack 
 — we'd love to meet you! 
 
 ## Work on an existing issue {#work-on-an-existing-issue}
 
-Go to the [Glossary GitHub repo issues](https://github.com/cncf/glossary/issues) to find a list of available issues. 
+Go to the [Reference Architecture GitHub repo issues](https://github.com/cncf/architecture/issues) to find a list of available issues. 
 You can use labels (e.g., English language, help needed, good first issue) to filter out issues.
 
 ![Issue and labels](/images/how-to/issue-and-labels.png)
@@ -82,60 +66,31 @@ Once you select a term to work on, comment on the issue.
 
 ![Claiming an issue](/images/how-to/claiming-an-issue.png)
 
-Additionally, notify the maintainers on the [#glossary](https://cloud-native.slack.com/archives/C02TX20MQBB) channel of the CNCF Slack workspace and 
-tag _@iamnoah_, _@nate-double-u_, _@Seokho Son_, _@Jihoon Seo_, and/or _@castrojo_ to be sure they don't miss it.
+Additionally, notify the maintainers on the [#glossary](https://cloud-native.slack.com/archives/C07JCV4CQD9) channel of the CNCF Slack workspace.
 
 For the next steps, please refer to the [Submitting a new term (creating a PR)](#submitting-a-new-term) section.
 
 **Note**: you can start working on an issue after the maintainers assigned it to you. 
-You can only claim one term at a time. 
-Workig on multiple terms is sequential, you must complete a term before claiming the next one.
-
-## Propose new terms {#propose-new-terms}
-
-You can propose a new term for others to work on or create a new definition yourself. 
-Either way, you'll start by [creating an issue](#creating-an-issue). 
-To be added to the glossary, every new term must meet the [CNCF's cloud native definition](https://github.com/cncf/toc/blob/main/DEFINITION.md). 
-The only exceptions are foundational terms needed to understand cloud native concepts.
-
-Below is a step-by-step guide for people unfamiliar with GitHub. 
-**If you are a GitHub Pro**, please _do_ scan this guide to gather enough information about the following topics:
-
-1. Locating templates for issues and new terms.
-2. Claiming issues. 
-3. Solving [spell check](#spell-check) failures. 
 
 ### Creating an issue {#creating-an-issue}
 
-Go to the [Glossary GitHub repo](https://github.com/cncf/glossary/issues) issues and click on "New issue".
+Go to the [Reference Architecture GitHub repo](https://github.com/cncf/architecture/issues) issues and click on "New issue".
 
 ![issues](/images/how-to/howto-01.png)
-
-Select "Request to add a new term (English)" from the list of templates. 
-
-![templates](/images/how-to/english-issue-template.jpg)
-
-Add the word you're suggesting, answer the questions, check the boxes, and hit "Submit new issue".
-If you're just proposing a new term, you're done! If you want to work on the definition, keep reading.
 
 ### Triaging your issue {#triaging-your-issue}
 
 Next, the maintainers will triage the issue. 
-That means they will assess if the term should be part of the Glossary. 
-Not every term will be admitted. To be included in the Glossary, they should be established and widely-used cloud native concepts.
 
-Please let the maintainers know that you've proposed a new term on Slack and tag _@iamnoah_, _@nate-double-u_, _@Seokho Son_, _@Jihoon Seo_, and/or _@castrojo_ so that they don't miss it.
-If you want to work on the definition, let the maintainers know and they'll assign it to you.
+### Submitting a new architecture (creating a PR) {#submitting-a-new-architecture}
 
-### Submitting a new term (creating a PR) {#submitting-a-new-term}
+There is an [example markdown file](https://github.com/cncf/architecture/content/en/architectures/example.md), which you can follow to see how you might build your story. Diagrams are available using [mermaid.js](https://mermaid.js.org/).
 
-As stated in our [Style Guide](/style-guide/), we highly recommend starting with a Google or Word doc. 
-
-Once the term is ready to submit, go to content (under <>code)…
+Once the architecture is ready to submit, go to content (under <>code)…
 
 ![content](/images/how-to/howto-05.png)
 
-…then "en" (for English) or the first two letters of the language you are contributing to…
+…then "en" (for English, other languages are not yet supported)
 
 ![language folder](/images/how-to/howto-06.png)
 
@@ -151,7 +106,7 @@ Copy the content…
 
 ![create new file](/images/how-to/howto-09.png)
 
-Add the name of the term in the URL as described in the [Best practices](#best-practices) section. 
+Add the name of the architecture in the URL as described in the [Best practices](#best-practices) section. 
 Add the .md extension at the end of the name (without this extension you won't be able to preview your file).
 Now paste the template content in the section below. Copy and paste the text of your definition into the file.
 To verify you've used Markdown as described in the [Best practices](#best-practices) section, click on "Preview".
@@ -171,15 +126,14 @@ Once you hit the "Create pull request" button your PR should be visible in the "
 
 ![prs](/images/how-to/howto-13.png)
 
-## Update an existing term {#update-an-existing-term}
+## Update an existing architecture {#update-an-existing-architecture}
 
-To update an existing term, you can either request changes by creating an issue 
-or work on the changes yourself and submit a PR.
+To update an existing architecture, you can request changes by creating an issue or, if you are from the organization that submitted the architecture, work on the changes yourself and submit a PR.
 
 ### Request a change via an issue {#request-a-change-via-an-issue}
 
-If you want to flag a problem with a term, you can use the "Report issue" option of the CNCF Glossary webpage. 
-Locate yourself in the CNCF page of the concept you'd like to flag and click on "Report issue". 
+If you want to flag a problem with an architecture, you can use the "Report issue" option of the CNCF Reference Architecture webpage. 
+Locate yourself in the CNCF page of the architecture you'd like to flag and click on "Report issue". 
 This will automatically open an issue for you
 
 ![report issue](/images/how-to/howto-14.png)
@@ -187,23 +141,6 @@ This will automatically open an issue for you
 Please describe your suggestions and why they are needed. Hit submit, and that's it. 
 
 ![submit issue](/images/how-to/howto-15.png)
-
-### Update a term directly {#update-a-term-directly}
-
-To modify a term and submit your suggestions, click "Edit this page."
-
-![edit this page](/images/how-to/howto-16.png)
-
-This will open the term's GitHub page. Make your changes and create a PR. 
-Please refer to the [Best practices](#best-practices) section above 
-and read our [Style Guide](/style-guide/) to make sure you follow our guidelines. 
-
-## Help localize the glossary {#help-localize-the-glossary}
-
-To help localize the glossary into a target language, please join the [#glossary-localizations](https://cloud-native.slack.com/archives/C02N2RGFXDF) channel on the CNCF Slack workspace and send us a message.
-You can either join an existing team or create a new one 
-(to see what it takes, read our [Localization Guide](https://github.com/cncf/glossary/blob/main/LOCALIZATION.md)). 
-Please read the **How to contribute** guide of the target language to gather the specifics of that team's contribution process. 
 
 ## Spell check {#spell-check}
 

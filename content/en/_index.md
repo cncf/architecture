@@ -8,7 +8,7 @@ Cloud computing, which we can think of as demand-driven delivery of IT resources
 
 This site is opinionated about what "cloud native" means, but not about what technologies you use to deliver that vision. Here we define what we mean by "cloud native", and the associated examples show real-life architectures, used in major production settings, that implement some or all of these principles. Examples also include the story of how they came to be to give you the organizational context essential to understanding the architecture.
 
-To take advantage of cloud computing an applications should be:
+To take advantage of cloud computing an application should be:
 
 - Distributable, such that applications are built as loosely coupled services, each of which performs a single function. This supports horizontal scalability.
 - Observable, such that requests crossing multiple services can be tracked through built-in monitoring, tracing and logging features to improve system understanding and reliability.
