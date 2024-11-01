@@ -24,11 +24,6 @@ tags:
 - developer-experience
 reference_architectures:
 - CI/CD
-- Service Delivery
-- Cell-based Architecture
-- Scaling
-- Adobe
-- GitOps
 ---
 
 ## Relevant CNCF projects
