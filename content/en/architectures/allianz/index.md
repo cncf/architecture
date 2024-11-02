@@ -2,19 +2,20 @@
 title: Enabling Allianz Direct's scalling through Platform Engineering
 date: 2024-10-28
 
-org-name: Allianz Direct
+org_name: Allianz Direct
 org_team: DevOps
-org-url: https://www.allianzdirect.de
+org_url: https://www.allianzdirect.de
+org_logo_filename: images/allianz.svg
 contact: Sergiu Petean
 email: sergiu.petean@allianzdirect.de
 entity: Cloud Engineering
 org_description: Financial Entity's Entity Cloud Engineering Platform Engineering team is responsible for building a uniform and standardise Cloud experience for the the whole group. 
-org-size: "10,000+" # size of entire org
-entity-size: "1,000+"  # size of target userbase - could be internal team etc
+org_size: "10,000+" # size of entire org
+user_size: "1,000+"  # size of target userbase - could be internal team etc
 industries:
  - Financial
  - Insurance
-business-model:
+business_model:
  - b2c
  - b2b
 regions:
@@ -26,9 +27,11 @@ tags:
 - europe
 - public_cloud
 - aws
+reference_architectures:
+  - Platform Engineering
 domains:
 - Infrastructure: [ "aws", "terraform", "crossplane", "helm" ]
-- Containerization: : [ "containerd", "ecr" ]
+- Containerization: [ "containerd", "ecr" ]
 - Orchestration: [ "eks", "Fargate" ]
 - Storage: [ "s3" ]
 - Networking: [ "cilium", "waf", "shield" ]
@@ -41,9 +44,11 @@ domains:
 - Caching: ["Redis"]
 - Data_Streaming: ["Kafka"]
 - IAM: ["AD", "Azure AD"]
+
 ---
 
 ## Relevant CNCF projects
+
 {{< cardpane >}}
   {{< card header="Kubernetes" >}}
   [![kubernetes logo](https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.svg)](https://www.cncf.io/projects/kubernetes/)
@@ -68,7 +73,7 @@ domains:
   We are using all four projects under Argo:
   - Argo CD: v2.9.22
   {{< /card >}}
-
+{{< /cardpane >}}
 
 ## Platform Engineering  @ Allianz Direct
 Allianz Direct has been working on building Platform Engineering for the past several years. We have created a cloud-native future-proof platform which offers an organisation-wide-devops(orgOps) experience on top of public cloud. Business, Software Engineers, Security, Compliance, Architecture, Support and Cost Efficiency are few of our stakeholders.
