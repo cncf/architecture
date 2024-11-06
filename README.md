@@ -4,7 +4,6 @@
 
 The [CNCF](https://www.cncf.io/) Cloud Native Reference Architecture site is hosted at [https://architecture.cncf.io/](https://architecture.cncf.io/) and is intended to be used as a reference for common cloud native architectures.
 
-
 ## Getting started
 
 If you'd like to help with the site we'd love to have your contributions! 
