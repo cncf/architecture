@@ -22,7 +22,6 @@ End Users report that the range of options in the cloud-native landscape is vast
 End Users report that this leads to a perception of complexity and impedes adoption.
 
 
-
 ## Scope 
 
 The End User Technical Advisory Board (TAB) established this working group to propose solutions to the problem outlined above as part of its charter commitments. This draft proposal is currently quite high-level as it is intended as the starting point on which we can iterate. The minimum viable product with which we can address the problem statement above is publishing one or more specific architectures that have been demonstrated in production environments. Any proposed solution should not go too far beyond that in this iteration.
