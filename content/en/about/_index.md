@@ -6,17 +6,18 @@ menu:
     weight: 40
 ---
 
+
 ## Opportunity
 
-### What is happening ?
+### What is happening?
 
 End Users are struggling with their Cloud Native Journeys. There is no clear/failure-proof framework to follow when executing a “cloud native” architecture using CNCF projects and tools.
 
-### Why is it happening ?
+### Why is it happening?
 
 End Users report that the range of options in the cloud-native landscape is vast and can be confusing.
 
-### What is the impact of this problem ?
+### What is the impact of this problem?
 
 End Users report that this leads to a perception of complexity and impedes adoption.
 
