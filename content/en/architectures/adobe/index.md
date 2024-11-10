@@ -284,7 +284,7 @@ Alongside the architecture improvements, Adobe is an integral part of CNOE cohor
 
 ### Unified CI/CD
 We have started a new initiative called Unified CI/CD which has the following goals:
-1. **Beyond containers** - We primarily cater to container based workloads and this initiave helps us serve non-container use cases such as mobile, static website, desktop, serverless etc.
+1. **Beyond containers** - We primarily cater to container based workloads and this initiative helps us serve non-container use cases such as mobile, static website, desktop, serverless etc.
 2. **Secure by default** - We aim to incorporate all non-negotiable security best practices by default in our pipelines and enforce them. 
 3. **Sealed Paved Roads** - We are working towards providing paved roads/paths for the most common use cases and make them **"sealed"**, minimizing the need (and making it hard) to deviate from the paved road while ensuring standardization, configurability, security, compliance, and other best practices.
 4. **Simplified workflows** - Make the workflows simpler to ensure faster onboarding, reduced time for "zero to first commit", faster “Concept -> Code -> Running state”.

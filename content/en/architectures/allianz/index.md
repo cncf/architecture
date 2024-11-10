@@ -1,5 +1,5 @@
 ---
-title: Enabling Allianz Direct's scalling through Platform Engineering
+title: Enabling Allianz Direct's scaling through Platform Engineering
 date: 2024-10-28
 
 org_name: Allianz Direct
@@ -82,7 +82,7 @@ Allianz Direct has been working on building Platform Engineering for the past se
 ### Platform Engineering Team Topology - internal
 
 The PE team is internally organised in DDOs - Distributed DevOps, where each ddo owns a Domain.
-This setup follows the reverse Conway manoeuvre where the reference architecture structure dictates
+This setup follows the reverse Conway manoeuver where the reference architecture structure dictates
 the teams setup.
 The PE team consist of 13 members. All of them internal employees.
 
@@ -92,13 +92,13 @@ Developer Service Hub (DSH): entry level engineers handling the low complexity t
 Cloud Auditing Hub (CAH): entry level engineers with a focus on compliance and audit
 Production Management Hub (PMH): entry level engineers with a focus on incident and problem management
 Technical Tribe Leads (TTL): Technical leads on the Tribe (department) level that became our evangelist for best practices and
-continuous innovation parteners.
+continuous innovation partners.
 
 ### Platform Engineering Team Topology - external
 Externally, the team has decided to scale by building on the concept of FDOs - Federated DevOps, where 
 each squad (developing team) has built internal devops expertise focusing a minimum amount of time on
 Operations concerns. A FDO community has flourished and enabled successfully an extremely aggressive organisation scale up
-The PE serves an aprox. 500 engineers and 1500 employees.
+The PE serves an approx. 500 engineers and 1500 employees.
 
 ## Platform Engineering Architecture 
 
@@ -109,16 +109,16 @@ several european markets.
 ![High Level Diagram](./images/PEArchitecture.jpg)
 
 It serves also all the newly created B2B business initiatives. 
-The highly aggressive scaleup of the both B2B and B2B businesses forced the PE team to redesign the architecture towards 
+The highly aggressive scale-up of the both B2B and B2B businesses forced the PE team to redesign the architecture towards
 a multi-tenant architecture with minimum operational effort.
 On top, the Platform has become a Organisation Group Standard and an example for Global initiatives. This forced the PE team to
 choose a light architecture under a second Platform based on Fargate ECS, reducing the operational effort and talent demand to minimum.
 
 PE team delivered several cloud native best practices:
-- gitops (ORGops to be more precise)
-- stateless clusters orchestrated by a management cluster 
+- GitOps (ORGops to be more precise)
+- Stateless clusters orchestrated by a management cluster
 - Fargate ECS multitenancy 
-- devsecops
+- DevSecOps
 - SRE
 
 ### Special projects that served us well
@@ -141,7 +141,7 @@ It is complemented by OTEL and ELK Stack and enabled us to build a state of the 
 
 EKS and now EKS + Fargate ECS works great for us. We can fully owns our core domains and stay hardened with minimum effort.
 Complementing our Stack with AWS services especially on Persistence, Data Streaming and Storage increase our innovation speed.
-ArgoCD with helm, Atlantis with terraform and Crossplane are working great for us, allowing us to follow the gitops way,
+ArgoCD with helm, Atlantis with terraform and Crossplane are working great for us, allowing us to follow the GitOps way,
 a great way of working for heavily regulated industries.
 
 ## Stakeholders value streams
