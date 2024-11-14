@@ -27,7 +27,7 @@ We employ a community-driven process governed by the CNCF to develop and improve
 Contributions are welcome from all participants who abide by the project's purpose and charter.
 
 Anyone wishing to contribute may submit a GitHub issue or create a pull request.
-Please ensure you follow the [Style Guide](/style-guide/), read the [How To Contribute](/contribute/) doc, join the [CNCF Slack](https://communityinviter.com/apps/cloud-native/cncf) workspace, and join the [#reference-architectures](https://cloud-native.slack.com/archives/C07JCV4CQD9) channel.
+Please ensure you read the [How To Contribute](/how-to/) doc, join the [CNCF Slack](https://communityinviter.com/apps/cloud-native/cncf) workspace, and join the [#reference-architectures](https://cloud-native.slack.com/archives/C07JCV4CQD9) channel.
 
 ## Acknowledgements
 
