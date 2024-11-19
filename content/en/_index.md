@@ -6,7 +6,8 @@ title: "Cloud Native Reference Architecture"
 
 Cloud computing, which we can think of as demand-driven delivery of IT resources over the network as distinct from statically delivered physical resources, allows and encourages changes in the way we deliver software. What, precisely, those changes are is not a settled question, and can lead to uncertainty when we try to design for the cloud from the ground up.
 
-This site is opinionated about what "cloud native" means, but not about what technologies you use to deliver that vision. Here we define what we mean by "cloud native", and the associated examples show real-life architectures, used in major production settings, that implement some or all of these principles. Examples also include the story of how they came to be to give you the organizational context essential to understanding the architecture.
+This site is opinionated about what "cloud native" means, but not about what technologies you use to deliver that vision. Here we define what we mean by "cloud native", and the associated examples show real-life architectures, used in major production settings, that implement some or all of these principles.
+Examples also include the story of how they came to be to give you the organizational context essential to understanding the architecture.
 
 To take advantage of cloud computing an application should be:
 
@@ -22,12 +23,13 @@ The Reference Architecture site is a project led by the [CNCF End User Technical
 
 ## Contributing
 
-Everybody is invited to suggest changes, additions, and improvements to the Cloud Native Reference Architecture site. 
+Everybody is invited to suggest changes, additions, and improvements to the Cloud Native Reference Architecture site.
 We employ a community-driven process governed by the CNCF to develop and improve upon this shared reference.
 Contributions are welcome from all participants who abide by the project's purpose and charter.
 
 Anyone wishing to contribute may submit a GitHub issue or create a pull request.
-Please ensure you follow the [Style Guide](/style-guide/), read the [How To Contribute](/contribute/) doc, join the [CNCF Slack](https://communityinviter.com/apps/cloud-native/cncf) workspace, and join the [#reference-architectures](https://cloud-native.slack.com/archives/C07JCV4CQD9) channel.
+
+Please ensure you read the [How To Contribute](/how-to/) doc, join the [CNCF Slack](https://communityinviter.com/apps/cloud-native/cncf) workspace, and join the [#reference-architectures](https://cloud-native.slack.com/archives/C07JCV4CQD9) channel.
 
 ## Acknowledgements
 
@@ -36,5 +38,5 @@ For a complete contributor list, please refer to [this GitHub page](https://gith
 
 ## License
 
-All code contributions are under the Apache 2.0 license. 
+All code contributions are under the Apache 2.0 license.
 Documentation is distributed under CC BY 4.0.
