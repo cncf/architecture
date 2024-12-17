@@ -1,43 +1,35 @@
-<!-- 
-  This shortcode is used to embed a Meshery design into hugo sites 
-  Meshery Design Embedding allows exporting a design as an interactive component 
-  that integrates seamlessly into websites, blogs, or any platform supporting HTML, CSS, and JavaScript. 
-  This embedded design is interactive, making it easier for infrastructure stakeholders 
-  to visualize, explore, and collaborate on service mesh designs.
-  
-  -- Usage: 
-  {{/*< meshery-design-embed src="path/to/embed.js" id="unique-id" style="custom-styles" >*/}}
+<!--
+  This shortcode is used to embed a Meshery design into hugo sites
 
-  More Information: 
+  -- Usage:
+  {{/*< meshery-design-embed src="path/to/design-image" id="design-id" style="custom-styles" >*/}}
+
+  More Information:
   Learn more about embedding Meshery designs at:
   https://docs.layer5.io/kanvas/designer/embedding-designs/
 -->
 
-<!-- 
-  Retrieve the path to the JavaScript file generated for embedding the Meshery design.
-  This script is generated when exporting a design from kanvas.new.
-  The `src` attribute specifies the script location, as provided by the user. 
+<!--
+  Retrieve the path to the image for embedding the Meshery design.
 -->
-{{ $script := .Get "src" }}
+{{ $snapshotImage := .Get "src" }}
 
-<!-- 
-  Retrieve the unique ID for the embedded Meshery design. 
-  This ID is typically generated when creating the embed code and is used to uniquely 
-  identify the container for the embedded design on the page.
+<!--
+  Retrieve the unique ID for the Meshery design.
 -->
 {{ $id := .Get "id" }}
 
-<!-- 
+<!--
   Retrieve optional custom styles for the embedding container.
-  If not provided, a default style will be applied to ensure proper rendering. 
+  If not provided, a default style will be applied to ensure proper rendering.
 -->
 {{ $style := .Get "style" }}
 
-<!-- 
-  Embedding Container: 
-  A `div` element is dynamically created with the provided or default styles. 
+<!--
+  Embedding Container:
+  A `div` element is dynamically created with the provided or default styles.
   - The `id` attribute links to the unique design embed.
-  - The `style` attribute can be customized or fall back to a default appearance, 
+  - The `style` attribute can be customized or fall back to a default appearance,
     which includes:
       - Height: 30rem
       - Width: 100% (responsive to container width)
@@ -45,16 +37,42 @@
 -->
 <div
     id="{{ $id }}"
-    {{ if $style }}
+    {{
+    if
+    $style
+    }}
     style="{{ $style }}"
-    {{ else }}
-    style="height: 30rem; width: 100%; border: 1px solid #eee"
-    {{ end }}
-></div>
+    {{
+    else
+    }}
+    style="height: auto; width: 100%; border: 1px solid #eee"
+    {{
+    end
+    }}
+>
+    <img src="{{ $snapshotImage }}" style="width: 100%; height: 100%" />
+</div>
 
-<!-- 
-  Embed Script: 
-  The JavaScript file (retrieved from the `src` attribute) is included here.
-  - The `type="module"` ensures the script runs in a modern ES6 module context.
--->
-<script src="{{ $script }}" type="module"></script>
+<div
+    class="meshery-design-footer"
+    style="text-align: center; margin-top: 1rem; font-size: 0.9rem"
+>
+    <a
+        href="https://cloud.layer5.io/catalog/content/design/{{ $id }}"
+        target="_blank"
+    >
+        View in catalog </a
+    >,
+    <a
+        href="https://playground.meshery.io/extension/meshmap?mode=design&design={{ $id }}"
+        target="_blank"
+    >
+        Edit in playground </a
+    >, or learn how to
+    <a
+        href="https://cloud.layer5.io/academy/learning-paths/mastering-meshery/introduction-to-meshery?chapter=interpreting-meshery-designs"
+        target="_blank"
+    >
+        interpret Meshery Designs
+    </a>
+</div>
