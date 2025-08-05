@@ -301,3 +301,7 @@ There were many key takeaways in this journey and several lessons learnt that ca
 
 ## Conclusion
 A rich and seamless developer experience acts as a developer productivity multiplier and helps any enterprise compete better. Flex-in-a-box architecture provides Adobe with a solid foundation which we can use to scale our current developer experience foundation for future needs. This includes developer experience needs for use cases such as Windows, Serverless, Cloud Infrastructure, Desktop and Mobiles, Static Websites etc.
+
+## Discussion
+
+End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/79) for this architecture.
