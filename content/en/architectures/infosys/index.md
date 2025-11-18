@@ -3,30 +3,23 @@ title: Enabling better Telecom Network Data Management transformation engine for
 date: 2025-10-28
 
 org_name: Infosys Ltd
-org_team: DevOps --check
+org_team: DevOps
 org_url: https://www.infosys.com/
 org_logo_filename: images/infosys.svg
-contact: Ravish Rathod
-email: ravish.rathod@infosys.com
-entity: Cloud Engineering --check
+contact: Rakesh Nair
+email: Rakesh_RamesanNair@infosys.com
+entity: Cloud Engineering
 org_description: A global leader in next-generation digital services and consulting. 
 org_size: "300,000+" # size of entire org
 user_size: "1,000+"  # size of target userbase - could be internal team etc
 industries:
  - Software
  - Consulting
-business_model:
- - b2c
- - b2b
-regions:
- - Europe
- - Germany
 tags: 
 - service-delivery
 - consulting
-- europe
 - public_cloud
-- aws
+- GCP
 reference_architectures:
   - DevOps
 domains:
@@ -68,7 +61,7 @@ domains:
 
 {{< /cardpane >}}
 ## Centralized Data Management for a European Operator
-client’s current landscape presents several key challenges hindering the adoption of automation and AI within the network landscape. The existence of fragmented legacy systems and a complex array of tools, lacking a unified source of truth, created significant obstacles. These includes
+Client’s current landscape presents several key challenges hindering the adoption of automation and AI within the network landscape. The existence of fragmented legacy systems and a complex array of tools, lacking a unified source of truth, created significant obstacles. These includes
  - Data silos
  - Disparate data
  - Diverse network 
