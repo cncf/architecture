@@ -128,7 +128,7 @@ The implementation of a centralized data store has wide-ranging impacts across b
 - **GitOps Continuous Delivery**:
   Declarative , git-based deployment for all Kubernetes resources. Perfect fit for configuration-driven architecture, allowing policy and workflow changes to propagate automatically.
 - **Kubernetes Package Manager using Helm**:
-  Simplifies the complex deployment of components in Network Data store including custom microservices .It provides required modularity enabling independent upgrades and scaling of components.
+  Simplifies the complex deployment of components in Network Data store including custom microservices. It provides required modularity enabling independent upgrades and scaling of components.
 - **Declarative & Configuration-Driven Approach**:
   CNCF tools align with the low-code/no-code principle by enabling declarative configuration management.
 
