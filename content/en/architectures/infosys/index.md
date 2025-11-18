@@ -92,6 +92,8 @@ A simplified high-level diagram describes the unified platform for data manageme
 ## Outcome
 The implementation of a centralized data store has wide-ranging impacts across business, technical, and operational domains. It provides a centralized, scalable, and policy-driven platform for managing network and service-related data. By unifying ingestion, validation, transformation, and serving capabilities, it enhances data quality, reduces duplication, and simplifies integration with downstream systems. The use of Open Policy Agent (OPA) introduces a flexible, low-code approach to managing business rules, enabling faster adaptation to evolving needs.
 
+![Orchestration layer leveraging OPA](./images/opa_orchestration.png)
+
 ## Key Impacts include:
 - **Improved Data Consistency**: Centralizes and standardizes data from multiple sources, ensuring a single source of truth for internal systems.
 - **Data Quality Improvement (DQI)**: Potentially increase DQI by ~80%, significantly reducing data errors and inconsistencies.
