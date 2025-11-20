@@ -6,8 +6,8 @@ org_name: Infosys Ltd
 org_team: DevOps
 org_url: https://www.infosys.com/
 org_logo_filename: images/infosys.svg
-contact: Rakesh Nair
-email: Rakesh_RamesanNair@infosys.com
+contact: Rakesh Nair, Sherni Samuel
+email: Rakesh_RamesanNair@infosys.com, Sherni_Samuel@infosys.com
 entity: Cloud Engineering
 org_description: A global leader in next-generation digital services and consulting. 
 org_size: "300,000+" # size of entire org
