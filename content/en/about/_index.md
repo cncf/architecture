@@ -58,6 +58,7 @@ We're proud to showcase initial success stories from:
 
 - [Adobe's architectural evolution](https://architecture.cncf.io/architectures/adobe/)
 - [AllianzDirect's cloud native transformation](https://architecture.cncf.io/architectures/allianz/)
+- [CERN's NextGen Scientific Computing and AI](https://architecture.cncf.io/architectures/cern-scientific-computing/)
 
 These reference architectures demonstrate both the current state of implementations and the journey taken to achieve them.
 
