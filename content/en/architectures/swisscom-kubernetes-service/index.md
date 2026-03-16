@@ -218,15 +218,21 @@ While the architecture delivered significant improvements, several challenges em
 
 - **Enterprise-Readiness of Cloud Native Technologies**: 
   Despite successful scaling in test and internal production environments, many advanced cloud-native technologies faced difficulties when deployed in enterprise-grade settings for end customers (e.g., B2B market). This highlighted the need for further refinement and testing in real-world scenarios.
-- **Limited Support and Professional Services**: 
+
+  For KubeVirt, for instance, there are only limited real-world examples, best practices or reference designs available to draw upon for large-scale, production-grade business deployments. Switching fully to Kube-OVN as the main network layer also demands extra effort and is less straightforward than traditional network solutions with established production lifecycles.
+
+- **Limited Support and Professional Services**:
   The availability of professional support, particularly 24/7, for open-source and cloud-native technologies is limited. This poses challenges for enterprises seeking to adopt these technologies and provide services with guaranteed service levels (SLAs).
-- **Knowledge Gaps and Skills Requirements**: 
+
+  A possible solution is for more companies to provide professional support and make these services more transparent. Furthermore, the CNCF could introduce a "Certified Supporter" verification system to strengthen trust in firms that offer professional support.
+
+- **Knowledge Gaps and Skills Requirements**:
   Adopting new technologies demands specialized knowledge and expertise. In-house engineers required additional training and support to effectively maintain and troubleshoot products built on these technologies.
-- **Customer Acceptance and Migration Challenges**: 
+
+- **Customer Acceptance and Migration Challenges**:
   Introducing a new platform based on modern technologies, without a proven track record in enterprise-grade deployments, required significant effort to educate customers, facilitate migration from legacy stacks, and promote the benefits of a sovereign cloud solution. This process demanded substantial resources and support to ensure a smooth transition.
 
 ## What sort of “glue” have you had to develop to enable usage of your architecture ?
-
 The reference architecture provides a strong foundation, making it practical and easy to use. The below elements were designed to simplify adoption, improve usability, and ensure seamless interaction across layers acting as the "glue":
 
 - **Unified Abstraction APIs**: Developed APIs (Open Service Broker spec) that hide complexity and provide a consistent interface for orchestration and other consuming Operational Support Systems (OSS).
@@ -241,13 +247,13 @@ The reference architecture provides a strong foundation, making it practical and
 
 Our architecture and product have undergone significant evolution through iterative development, driven by customer feedback and emerging requirements.
 
-- **Iterative Development Approach**: 
+- **Iterative Development Approach**:
   We began by establishing foundational layers and meeting the needs of our internal Swisscom customers. Subsequent iterations introduced advanced features for end customers, incorporating feedback from both internal and external stakeholders.
-- **Continuous Improvement and Feedback Loop**: 
+- **Continuous Improvement and Feedback Loop**:
   Each iteration allowed us to gather valuable insights and add new functionalities, refining our product and enhancing customer satisfaction.
-- **Steep Learning Curve and Expertise Development**: 
+- **Steep Learning Curve and Expertise Development**:
   As we ramped up the product, our teams faced a significant learning curve, developing essential expertise and professionalizing DevOps processes to ensure seamless operation.
-- **Strategic Partnerships and Support**: 
+- **Strategic Partnerships and Support**:
   Our collaboration with Kubermatic enabled us to leverage professional support for key components, including KubeVirt and Kube-OVN, ultimately maturing our production platform and solidifying its readiness for enterprise-grade deployments.
 
 Through this iterative process, we've gained valuable lessons and refined our architecture to better meet the needs of our customers, while developing the expertise and partnerships necessary to drive continued success.
@@ -260,17 +266,17 @@ By embracing open-source and cloud native technologies, Swisscom successfully cr
 
 Building on the success of our proven reference architecture, which now supports both internal and external customer workloads in production, we're focused on expanding and enhancing our offerings:
 
-- **Hybrid Cloud Expansion and Multi-Cloud Flexibility**: 
+- **Hybrid Cloud Expansion and Multi-Cloud Flexibility**:
   We're working to enable seamless public cloud deployments, complementing our existing Swiss-based data centers and strengthening hybrid cloud use cases.
 - **Edge Cloud Support**:
   With cloud sovereignty in mind, we are developing a «Kubernetes Service On-Prem» extension that will deliver the Private Cloud product on a Cloud Edge Stack at customer premises, enabling an autonomous instance of our Kubernetes Service. This is currently in development with an interested customer.
-- **GPU-Enabled Workloads and Emerging Technologies**: 
+- **GPU-Enabled Workloads and Emerging Technologies**:
   Next, we'll be integrating GPU support and exploring other emerging technologies to unlock new possibilities for compute-intensive applications.
-- **Customer-Driven Features and Enhancements**: 
+- **Customer-Driven Features and Enhancements**:
   We're committed to delivering additional features and functionalities requested by our customers, further enriching our platform and services.
-- **Simplified Onboarding and Resource Optimization**: 
+- **Simplified Onboarding and Resource Optimization**:
   To improve efficiency and resource utilization, we'll be introducing a shared cluster concept, allowing for more flexible and efficient use of our bare-metal infrastructure.
-- **Exploring New Use Cases - VM Workloads**: 
+- **Exploring New Use Cases - VM Workloads**:
   We're also investigating the possibility of hosting classical VM workloads on our Cloud Native Infrastructure Platform (CNIP), expanding the platform's use cases beyond container-based workloads and further increasing its versatility.
 
 By pursuing these initiatives, we aim to continue delivering value to our customers, drive innovation, and grow our architecture and services to meet evolving needs.
