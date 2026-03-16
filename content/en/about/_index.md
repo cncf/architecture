@@ -58,6 +58,7 @@ We're proud to showcase initial success stories from:
 
 - [Adobe's architectural evolution](https://architecture.cncf.io/architectures/adobe/)
 - [AllianzDirect's cloud native transformation](https://architecture.cncf.io/architectures/allianz/)
+- [Swisscom's end-to-end cloud native telco platform automation](https://architecture.cncf.io/architectures/swisscom-cloud-native-telco/)
 
 These reference architectures demonstrate both the current state of implementations and the journey taken to achieve them.
 
