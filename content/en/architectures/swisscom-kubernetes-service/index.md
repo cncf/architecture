@@ -1,5 +1,5 @@
 ---
-title: Developing a modern and sovereign Private Cloud «Kubernetes Service» for Swiss-based enterprises.
+title: A modern and sovereign Private Cloud «Kubernetes Service» for Swiss-based enterprises.
 date: 2026-03-04
 
 org_name: Swisscom (Switzerland) Ltd
