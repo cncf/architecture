@@ -286,7 +286,7 @@ SDC will now sync the configuration to the 5G CNF and ExternalDNS will create th
 - **Tooling gap for KRM-based configuration assembly** — no mature, community-standard Kubernetes-native tool exists for dynamic configuration hydration. Swisscom had to build custom operators to fill this gap.
 - **GitOps+KRM auditability trade-off** — with dynamically assembled configurations, not all state is visible in Git history. The team continues to explore automated intermediary Git layers.
 - **Cumbersome vendor configuration manifests** — large, monolithic configuration files from CNF vendors (with ~5,000 interdependent parameters) required significant effort to decompose into intent-based abstractions.
-- **Telco YANG and Kubernetes YAML lack feature parity** — SDC is based on KRM which is limited to YAML. Mapping YANG to this model is a challenge. For an example, [YANG has ordered lists which YAML doesn't](https://github.com/sdcio/data-server/issues/394).
+- **Telco’s imperative model and Kubernetes’ declarative approach do not align well** - SDC follows the declarative paradigm, where users define the desired state and SDC determines the actions to achieve it. In contrast, NETCONF/gNMI use an imperative model that requires explicit ordered steps (“do A, then B, then C”). Translating declarative goals into imperative sequences is complex when user‑defined ordering matters, such as for firewall rules where evaluation order affects behaviour. Example: [Issue "Support user sorted lists"](https://github.com/sdcio/data-server/issues/394)
 
 ## What sort of "glue" have you had to develop?
 
