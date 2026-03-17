@@ -6,8 +6,8 @@ org_name: Swisscom (Switzerland) Ltd
 org_team: Mobile
 org_url: https://www.swisscom.com
 org_logo_filename: images/swisscom.png
-contact: Joel Studler, Jelena Malić, Fabian Schulz
-email: joel.studler@swisscom.com, jelena.malic@swisscom.com, fabian.schulz1@swisscom.com
+contact: Joel Studler, Jelena Malić, Fabian Schulz, Alexander North
+email: joel.studler@swisscom.com, jelena.malic@swisscom.com, fabian.schulz1@swisscom.com, alexander.north1@swisscom.com
 org_description: The leading ICT company in Switzerland.
 org_size: "15,000+"
 user_size: "1000+"
@@ -79,7 +79,7 @@ domains:
 
 - **Using since:** 2024
 
-  Used as the Config Sync Operator to push assembled configurations to CNFs. SDC enables vendor-agnostic, declarative configuration management using YANG schemas and NETCONF/gNMI protocols. Swisscom adopted SDC as its strategic configuration management solution and actively contributes features including config blame, drift detection, validation, proactive CNF onboarding, and NETCONF Actions support.
+  Used as the Config Sync Operator to push assembled configurations to CNFs. SDC enables vendor-agnostic, declarative configuration management using YANG schemas and NETCONF/gNMI protocols. Swisscom adopted SDC as its strategic configuration management solution and actively contributes features including config blame, drift detection, validation, testing compatibility with CNFs, and NETCONF Actions support. Swisscom is listed as an official SDC adopter.
   {{< /card >}}
 
   {{< card header="CoreDNS" >}}
@@ -147,18 +147,18 @@ domains:
 
 Swisscom has built a cloud native telco platform for the end-to-end automation of its 5G standalone core network and cross-domain resource orchestration. The architecture replaces traditional imperative network management (Jenkins pipelines, Ansible playbooks) with a fully declarative, Kubernetes-native automation model driven by GitOps and the Kubernetes Resource Model (KRM).
 
-A development environment alone contains approximately 2,000 pods with over 5,000 interdependent configuration parameters across CNFs such as UPF, SMF, AMF, UDM, UDR, BSF, NRF, NSSF, and AUSF. Engineers express high-level intents as Kubernetes Custom Resources; custom operators dynamically assemble full configurations at runtime — fetching IP addresses from IPAM, secrets from Vault, certificates from PKI, and infrastructure details from the cluster.
+A mobile core development environment contains approximately 2,000 pods with over 5,000 interdependent configuration parameters across Cloud-Native Network Functions (CNFs) such as UPF, SMF, AMF, UDM, UDR, BSF, NRF, NSSF, and AUSF. Engineers express high-level intents as Kubernetes Custom Resources; custom operators dynamically assemble full configurations at runtime — fetching IP addresses from IPAM, secrets from Vault, certificates from PKI, and infrastructure details from the cluster.
 
 While the 5G core is the primary domain, the orchestration framework extends across multiple network domains and infrastructure services, applying the same intent-based automation patterns consistently.
 
 ## Organisation
 
-Swisscom is the leading ICT company in Switzerland and offers mobile, Internet and TV, as well as comprehensive IT and digital services to private and business customers.
+Swisscom is the leading Telecommunications/ISP and ICT company and offers mobile, Internet and TV products, as well as comprehensive IT and digital services to private and business customers.
 Swisscom's expertise in cloud native technologies is well-established, as evidenced by its status as a former Gold member and Management Board member of the Cloud Foundry Foundation, along with its certification for Cloud Foundry.
 Additionally, Swisscom demonstrates a strong commitment to the Open-Source community, having been a CNCF Silver Member for several years and serving as a Kubernetes Certified Service Provider (KCSP) partner.
-Our skilled employees have delivered numerous speeches and presentations at prestigious events such as KubeCon, Cloud Native Zürich, Swiss Cloud Native Day, KCD Suisse Romande, ContainerDays, among others.
+Our skilled employees have delivered numerous talks and presentations at prestigious events such as KubeCon, Cloud Native Zürich, Swiss Cloud Native Day, KCD Suisse Romande, ContainerDays.
 
-The company has embarked on a strategic transformation from a traditional telecom operator ("Telco") to a technology company ("TechCo"), with 5G as a central driver.
+The company has embarked on a strategic transformation from a traditional telecom operator ("Telco") to a technology company ("TechCo") with 5G as a central driver.
 Swisscom operates an extensive 5G Non-Standalone (NSA) network covering 99% of the Swiss population. The cloud native platform described here powers the 5G Standalone (SA) core.
 
 ## Teams
@@ -166,10 +166,10 @@ Swisscom operates an extensive 5G Non-Standalone (NSA) network covering 99% of t
 Multiple teams collaborate on this platform:
 
 - **Cloud Native Resource Orchestration** — creates a robust framework for orchestrating cloud-native resources such as CNFs, IPAM, Networks, DNS, Kubernetes Clusters, and more. Designs and operates GitOps pipelines, builds Kubernetes operators, and develops the management cluster UI/UX.
-- **Mobile Cloud Native Engineering** — responsible for design, implementation, and operation of the cloud native 5G core platform, including GitOps pipelines, Kubernetes operators, and network function lifecycle management.
+- **Mobile Cloud Native Engineering** — designs, implements, and operates the cloud native 5G core platform, including GitOps pipelines, Kubernetes operators, and network function lifecycle management.
 - **DNS Engineering** — builds and operates the highly reliable cloud native DNS service underpinning the 5G core and other infrastructures.
 - **Network Engineering** — provides IPAM and Network-as-a-Service.
-- **Platform & Developer Experience** — responsible for Kubernetes cluster management and developer tooling.
+- **Platform & Developer Experience** — manages Kubernetes clusters and builds developer tooling.
 
 ## Architecture overview & Goals
 
@@ -268,12 +268,12 @@ spec:
         - 1.2.3.4  # from IpAddressClaim.status.ipAddress
 ```
 
-SDC will now sync the configuration to the 5G CNF, ExternalDNS will create the DNS records in the authoritative PowerDNS backend.
+SDC will now sync the configuration to the 5G CNF and ExternalDNS will create the DNS records in the authoritative PowerDNS backend.
 
 ## What has worked well?
 
 - **Intent-based configuration** dramatically reduced the complexity engineers face. Instead of managing thousands of interdependent parameters, they work with concise Custom Resources.
-- **Full GitOps reconciliation** across all layers (deployment, configuration, DNS, certificates, IPAM) caught configuration drift and ensured consistency.
+- **Full GitOps reconciliation** across all layers (deployment, configuration, DNS, certificates, IPAM), configuration drift is detected and reverted to ensure consistency.
 - **Custom Kubernetes Operators** (built with Kubebuilder/controller-runtime) proved to be the right pattern for telco domain-specific concerns, providing full reconciliation support and native KRM integration.
 - **The claim model for IPAM** (NetBox Operator) elegantly solved dynamic IP allocation by following established Kubernetes patterns (PVC analogy).
 - **Bringing all automation in-band with Kubernetes** gave the orchestrator full visibility and control, enabling self-healing and eliminating the brittleness of out-of-band tools.
@@ -292,7 +292,7 @@ SDC will now sync the configuration to the 5G CNF, ExternalDNS will create the D
 
 - **Custom Kubernetes Operators** — domain-specific operators for CNF configuration abstraction, config synchronization, IPAM integration, and DNS automation, all scaffolded with Kubebuilder and controller-runtime.
 - **Configuration hydration logic** — the CNF Config Operator dynamically assembles full configurations from multiple sources (NetBox, Vault, cluster environment) based on high-level intents.
-- **SDC contributions** — [significant development work on SDC](https://github.com/search?q=org%3Asdcio+author%3Aalexandernorth&type=pullrequests) including proactive CNF onboarding, validation, monitoring, config blame, drift detection, and NETCONF Actions support.
+- **SDC contributions** — [significant development work on SDC](https://github.com/search?q=org%3Asdcio+author%3Aalexandernorth&type=pullrequests) including early testing of CNF compatibility, configuration validation, monitoring, config blame, drift detection, and NETCONF Actions support.
 - **ExternalDNS NAPTR support** — contributed [PR #4212](https://github.com/kubernetes-sigs/external-dns/pull/4212) to enable NAPTR record support for SIP phone calls.
 - **Resilient DNS architecture** — created a reference architecture and open sourced on [GitHub](https://github.com/swisscom/cloud-native-telco/tree/main/prototypes/dns).
 - **Headlamp plugins** — [Custom Resource plugin](https://github.com/kubernetes-sigs/headlamp/pulls?q=is%3Apr+author%3Afaebr+).
@@ -319,7 +319,7 @@ The architecture evolved significantly from traditional imperative automation to
 ### What's next for your architecture?
 
 - **Mature SDC Integration** — Continue expanding SDC for full lifecycle management with continuous reconciliation via gNMI and NETCONF, including completion of NETCONF Actions support.
-- **Eliminate NETCONF Dependency** — Work with CNF vendors to move toward fully Kubernetes-native configuration APIs, reducing reliance on traditional telco protocols.
+- **Eliminate NETCONF Dependency** — Work with CNF vendors to move toward fully Kubernetes-native configuration APIs, reducing reliance on legacy telco protocols.
 - **Advanced Dynamic Configuration Assembly** — Develop more sophisticated Kubernetes operators for multi-source configuration hydration, enabling even more complex intent-based workflows across multiple network domains.
 - **Multi-Cluster & Edge Expansion** — Scale the architecture to additional edge locations and Kubernetes clusters while maintaining consistent GitOps-driven automation.
 - **Community Tooling for KRM** — Contribute toward a mature, Kubernetes-native tool for dynamic configuration assembly that the wider cloud native community can adopt, addressing the current gap in tooling identified during the project.
@@ -332,11 +332,11 @@ The architecture evolved significantly from traditional imperative automation to
 | Contribution | Details |
 | ------------ | ------- |
 | **NetBox Operator** | Open-sourced under [https://github.com/netbox-community/netbox-operator](https://github.com/netbox-community/netbox-operator) |
-| **SDC Contributions** | Active contributor to the SDC project (on its path to CNCF incubation) |
+| **SDC Contributions** | Active contributor to the [SDC project](https://docs.sdcio.dev/) (on its path to CNCF incubation) |
 | **KRM Demo Code** | [https://github.com/swisscom/containerdays-2024-krm](https://github.com/swisscom/containerdays-2024-krm) |
 | **Conference Talks** | [KubeCon EU, ContainerDays, Open Source Summit EU](https://github.com/swisscom/cloud-native-telco/) |
 | **CNCF/LFN Whitepaper** | Co-authored [Accelerating Cloud Native in Telco](https://github.com/lfn-cnti/bestpractices/blob/main/doc/whitepaper/Accelerating_Cloud_Native_in_Telco.md) |
 
 ## Discussion
 
-End user members may participate in the discussion thread for this architecture.
+End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/85) for this architecture.
