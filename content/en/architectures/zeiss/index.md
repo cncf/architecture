@@ -82,17 +82,21 @@ reference_architectures:
   {{< /card >}}
 {{< /cardpane >}}
 
-## Background & Context
+## Organization
 ZEISS Vision Care produces spectacle lenses, instruments for refraction, and glasses adjustment equipment. Often, lenses are manufactured to an individual consumer's prescription, effectively a batch size of one, which makes order fulfillment a multi-step coordination process.
 
 Our Business Enablement & IT team develops, designs, and operates the order fulfillment platform that underpins this process.
 
-## The Challenge & Goal
+## Synopsis
 We are reworking the order fulfillment process using a greenfield approach to modernize core systems. Our goal is a reliable, scalable platform that can evolve with business needs while remaining cost-efficient. The platform supports several key capabilities:
 - Order routing: decide where the order should be produced.
 - Order document generation: generate the necessary manufacturing and shipping documents for the order.
 - Logistics routing: decide how to ship the order to the customer.
 - Additional auxiliary domains as required.
+
+## Architecture overview & Goals
+
+### Goals
 
 The architecture is designed for future-proofing and scale. By leveraging event-driven scaling with KEDA and decoupled microservices via Dapr, the system is built to seamlessly absorb high-volume, global order loads as new processes are continuously migrated to the new platform.
 
@@ -102,10 +106,10 @@ The architecture is designed for future-proofing and scale. By leveraging event-
 - Maintainable and extensible
 - Cost-effective operations
 
-## The Architecture Solution
+### Architecture Overview
 ![Architecture](./images/solutionArchitecture.svg)
 
-### Data & Storage Strategy
+#### Data & Storage Strategy
 The platform uses Azure-managed data services as backing stores:
 - **MSSQL**: Transactional order data and relational schemas
 - **Cosmos DB**: Scaled state management and cross-region replication
@@ -114,16 +118,16 @@ The platform uses Azure-managed data services as backing stores:
 
 Dapr's state abstraction layer is used for Cosmos DB, Azure Blob Storage, and Redis, decoupling microservices from those storage backends and enabling migrations without application-level changes. For Azure Blob Storage, we also use Dapr's blob binding to interact with data, in addition to the state abstraction layer.
 
-### Messaging & Asynchronous Communication
+#### Messaging & Asynchronous Communication
 Azure Service Bus serves as the central message broker for asynchronous processes. Services publish and subscribe to topics via Dapr's pub/sub building block, enabling loose coupling between applications. This event-driven approach provides resilience and allows each service to scale independently based on demand.
 
-### Network & Service Discovery
+#### Network & Service Discovery
 Services use Dapr's service invocation building block instead of hardcoded endpoints, enabling resilience and the ability to replace or upgrade service implementations without changing callers. External traffic is routed to services via Ingress NGINX.
 
-### CI/CD & Deployment
-Azure DevOps Pipelines automate build, test, and deployment applications. We use a single, centralized Helm chart and store deployment configuration in Git as the single source of truth; the pipeline generates environment- and service-specific `values.yaml` files and deploys each service as its own Helm release to Kubernetes.
+#### CI/CD & Deployment
+Azure DevOps Pipelines automate building, testing, and deploying applications. We use a single, centralized Helm chart and store deployment configuration in Git as the single source of truth; the pipeline generates environment- and service-specific `values.yaml` files and deploys each service as its own Helm release to Kubernetes.
 
-## The Cloud Native Stack
+## Can you expand on why you are using those projects/services?
 We rely heavily on CNCF projects and open-source tooling to form the backbone of our platform:
 
 - **Kubernetes (AKS)** *(Using since 2020)*: Hosts > 200 microservices supporting order fulfillment workflows. It provides the core compute platform for containerized services, offering a flexible model that supports multiple frameworks, programming languages, and dynamic scaling.
@@ -133,17 +137,7 @@ We rely heavily on CNCF projects and open-source tooling to form the backbone of
 - **Ingress NGINX** *(currently in use, pending replacement – see Future Outlook)*: External traffic routing and load balancing.
 - **OpenTelemetry Collector** *(Using since 2020)*: Provides consistent instrumentation and exports telemetry to multiple targets. It enables distributed tracing and metrics collection across microservices, ensuring observability and performance monitoring.
 
-## Integration & Standardization
-
-Since we had a greenfield start, we were not constrained by legacy endpoints or migration paths. However, managing over 200 microservices required strict boundaries and standardized communication patterns. We heavily utilized Domain-Driven Design (DDD) principles—specifically **Bounded Contexts** to ensure each microservice owns its data and domain logic.
-
-To enforce these boundaries and standardize the "glue" between services, we developed:
-- **Standardized Helm Templates**: A unified set of Helm charts that abstract away the complexity of Kubernetes manifests and Dapr sidecar configuration. Developers provide application-specific KEDA `ScaledObject` definitions.
-- **Common Libraries**: While Dapr abstracts away many infrastructure concerns, we built thin, language-specific wrappers around the Dapr SDKs to enforce internal logging and error-handling standards.
-
-## Lessons Learned & Best Practices
-
-**What Worked Well:**
+## What has worked well?
 Kubernetes, Helm, and KEDA have proven reliable and are widely used.
 
 **Scaling to Zero and Back:**
@@ -158,8 +152,19 @@ Dapr is consistently evolving, allowing us to streamline our platform by replaci
 **Data Ownership and Boundaries:**
 A critical lesson was the strict enforcement of data ownership. In a microservices architecture with over 200 services, we learned that clearly defining which service owns which data is non-negotiable. We found that any direct data access between services, bypassing their dedicated APIs, inevitably leads to tight coupling and maintenance challenges. Adhering to Domain-Driven Design (DDD) principles, where each service exposes its data only through a well-defined API, was essential for maintaining a scalable and evolvable system. This prevented a "distributed monolith" and ensured long-term architectural integrity.
 
+## What sort of "glue" have you had to develop?
+
+Since we had a greenfield start, we were not constrained by legacy endpoints or migration paths. However, managing over 200 microservices required strict boundaries and standardized communication patterns. We heavily utilized Domain-Driven Design (DDD) principles—specifically **Bounded Contexts** to ensure each microservice owns its data and domain logic.
+
+To enforce these boundaries and standardize the "glue" between services, we developed:
+- **Standardized Helm Templates**: A unified set of Helm charts that abstract away the complexity of Kubernetes manifests and Dapr sidecar configuration. Developers provide application-specific KEDA `ScaledObject` definitions and Dapr component definitions.
+- **Common Libraries**: While Dapr abstracts away many infrastructure concerns, we built thin, language-specific wrappers around the Dapr SDKs to enforce internal logging and error-handling standards.
+
 ## Impact & Results
 By adopting this cloud-native stack, we have built a highly scalable and future-ready order fulfillment system. A key driver of this success has been our extensive use of Dapr, which not only significantly reduced boilerplate code but also provided us with a high degree of vendor neutrality. This abstraction layer means we are not tightly coupled to specific cloud providers' SDKs, enabling an architecture that is portable, flexible, and robust enough for long-term growth.
 
-## Future Outlook
+## What's next for your architecture?
 We are constantly investigating how to run our services as efficiently and economically as possible. A near-term priority is replacing our existing Ingress NGINX setup. Because the Kubernetes project has [officially announced the retirement of the ingress-nginx project](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/), we are actively evaluating alternatives—including NGINX Gateway Fabric, Envoy Gateway, and Traefik—while striving to preserve our routing behavior, TLS automation, and operational stability. Transitioning to the Gateway API is a key step in future-proofing our external traffic routing.
+
+## Discussion
+End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/86) for this architecture.
