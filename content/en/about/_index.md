@@ -3,7 +3,7 @@ title: About
 toc_hide: true
 menu:
   main:
-    weight: 40
+    weight: 50
 ---
 
 ## Our Mission
