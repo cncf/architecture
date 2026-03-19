@@ -280,3 +280,7 @@ Building on the success of our proven reference architecture, which now supports
   We're also investigating the possibility of hosting classical VM workloads on our Cloud Native Infrastructure Platform (CNIP), expanding the platform's use cases beyond container-based workloads and further increasing its versatility.
 
 By pursuing these initiatives, we aim to continue delivering value to our customers, drive innovation, and grow our architecture and services to meet evolving needs.
+
+## Discussion
+
+End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/87) for this architecture.
