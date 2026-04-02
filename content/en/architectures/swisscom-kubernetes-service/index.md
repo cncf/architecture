@@ -1,14 +1,14 @@
 ---
-title: A modern and sovereign Private Cloud «Kubernetes Service» for Swiss-based enterprises.
+title: A modern and sovereign Private Cloud «Kubernetes Service» for Swiss-based enterprises
 date: 2026-03-04
 
 org_name: Swisscom (Switzerland) Ltd
 org_team: Cloud Native Solutions
 org_url: https://www.swisscom.com
 org_logo_filename: images/swisscom.png
-contact: Berchtold Fabio, Wälchli Gregor, Kläy Pat, Schnyder Christoph, Dietrich Christian
-email: fabio.berchtold@swisscom.com, gregor.waelchli@swisscom.com, pat.klaey@swisscom.com, christoph.schnyder@swisscom.com, christian.dietrich@swisscom.com
-org_description: The leading ICT company in Switzerland.
+contact: Aymon Andrea, Berchtold Fabio, Wälchli Gregor, Kläy Pat, Schnyder Christoph, Dietrich Christian, Restivo Davide
+email: andrea.aymon@swisscom.com, fabio.berchtold@swisscom.com, gregor.waelchli@swisscom.com, pat.klaey@swisscom.com, christoph.schnyder@swisscom.com, christian.dietrich@swisscom.com, davide.restivo@swisscom.com
+org_description: The leading ICT company in Switzerland
 org_size: "15,000+" # size of entire org
 user_size: "3000+"  # size of target userbase - could be internal team etc
 
@@ -17,7 +17,7 @@ industries:
 - Telecommunication
 - Software
 - Cloud
-tags: 
+tags:
 - service-delivery
 - cloud_native
 - private_cloud
@@ -34,7 +34,7 @@ reference_architectures:
   [![kubernetes logo](https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.svg)](https://www.cncf.io/projects/kubernetes/)
   - **Using since:** 2024
   - **Current version:** 1.32.8 (CNIP)
-  - **Current version:** 1.31.x - 1.34.x (SKP)
+  - **Current version:** 1.31.x - 1.35.x (SKP)
 
   Kubernetes enables high availability, scalability, and performance for infrastructure, offering a centralized and policy-driven platform to manage network and service data supporting Managed Kubernetes for our cloud customers.
   {{< /card >}}
@@ -97,6 +97,7 @@ reference_architectures:
   [![helm logo](https://github.com/cncf/artwork/raw/main/projects/helm/horizontal/color/helm-horizontal-color.svg)](https://www.cncf.io/projects/helm/)
   - **Using since:** 2024
   - **Current version:** v3.5.1 (CNIP)
+  - **Current version:** v3.19.4 (SKP)
 
   Helm automates the creation, packaging, configuration, and deployment of Kubernetes applications by creating reusable charts.  
   {{< /card >}}
@@ -105,8 +106,35 @@ reference_architectures:
  [![cnpg logo](https://landscape.cncf.io/logos/d795f87b2810954c88802c0b4bd6b3eee5a840c32cbee7276b25831cfb09e1cd.svg)](https://www.cncf.io/projects/cloudnativepg/)
   - **Using since:** 2024
   - **Current version:** v1.27.0 (CNIP)
+  - **Current version:** v1.28.1 (SKP)
 
-CloudNativePG (CNPG) manages PostgreSQL databases in cloud-native environments. It handles the full lifecycle of highly available PostgreSQL clusters (primary/standby with native streaming replication), including declarative deployment, scaling, backups, self-healing, failover and monitoring.  
+CloudNativePG (CNPG) manages PostgreSQL databases in cloud-native environments. It handles the full lifecycle of highly available PostgreSQL clusters (primary/standby with native streaming replication), including declarative deployment, scaling, backups, self-healing, failover and monitoring.
+  {{< /card >}}
+
+  {{< card header="Cilium" >}}
+ [![cnpg logo](https://landscape.cncf.io/logos/6b052d96054bbe311b0429d2267d60b92b1c5e6527e6646c0bf2fc06a55e2f43.svg)](https://www.cncf.io/projects/cloudnativepg/)
+  - **Using since:** 2024
+  - **Current version:** v1.18.6 (SKP)
+
+Cilium is an open source, cloud native solution for providing, securing, and observing network connectivity between workloads, fueled by the revolutionary Kernel technology eBPF. It provides a simple flat Layer 3 network with the ability to span multiple clusters in either a native routing or overlay mode. It is L7-protocol aware and can enforce network policies on L3-L7 using an identity based security model that is decoupled from network addressing.
+  {{< /card >}}
+
+  {{< card header="Longhorn" >}}
+ [![cnpg logo](https://landscape.cncf.io/logos/acd3d31cbdf0aa2ef2d695fa4a3571e6d232a96214ec33fe0b2022b9719c244c.svg)](https://longhorn.io/)
+  - **Using since:** 2024
+  - **Current version:** v1.10.1 (SKP)
+
+Longhorn is a lightweight, reliable, and powerful cloud-native distributed block storage system for Kubernetes, that implements distributed block storage using containers and microservices. Longhorn creates a dedicated storage controller for each block device volume and synchronously replicates the volume across multiple replicas stored on multiple nodes. The storage controller and replicas are themselves orchestrated using Kubernetes.
+  {{< /card >}}
+
+{{< /cardpane >}}
+
+  {{< card header="EnvoyGateway" >}}
+ [![cnpg logo](https://landscape.cncf.io/logos/67fa9ae58fda716ed2b9e4df310790724233cf95d05738c9b999f1ec582f788f.svg)](https://gateway.envoyproxy.io/)
+  - **Using since:** 2025
+  - **Current version:** v1.6.4 (SKP)
+
+Part of the Envoy project, Envoy Gateway is an open source project for managing Envoy Proxy as a standalone or Kubernetes-based application gateway. Kubernetes Gateway API resources are used to dynamically provision and configure the managed Envoy Proxies.
   {{< /card >}}
 
 {{< /cardpane >}}
@@ -117,8 +145,8 @@ Swisscom's expertise in cloud native technologies is well-established, as eviden
 Additionally, Swisscom demonstrates a strong commitment to the Open-Source community, having been a CNCF Silver Member for several years and serving as a Kubernetes Certified Service Provider (KCSP) partner. 
 Our skilled employees have delivered numerous speeches and presentations at prestigious events such as KubeCon, Cloud Native Zürich, Swiss Cloud Native Day, KCD Suisse Romande, ContainerDays, among others.
 
-Our next generation Private Cloud Container as a Service offering «Kubernetes Service» for the B2B market addresses customer’s need for scalable and highly available Kubernetes workload as a flexible and secure IT foundation.
-It is part of our Swiss-based Enterprise Service Cloud (ESC) market channel as a sovereign, Private Cloud Kubernetes offering for effortless provisioning and usage of our customer’s container workloads. 
+Our next generation Private Cloud Container as a Service offering «Kubernetes Service» for the B2B market addresses customer's need for scalable and highly available Kubernetes workload as a flexible and secure IT foundation.
+It is part of our Swiss-based Enterprise Service Cloud (ESC) market channel as a sovereign, Private Cloud Kubernetes offering for effortless provisioning and usage of our customer's container workloads.
 
 ## Describe your entity and/or team
 The development and delivery of the new «Kubernetes Service» is done at within Swisscom's IT-Clouds Value Stream and shared across two teams:
@@ -148,7 +176,7 @@ A simplified high-level diagram describes Kubernetes Service, including multi-te
 
 ![Central Kubernetes Infra Cluster is used to provide customer environments/tenants based on consolidated infrastructure](./images/kubernetes-service-central-infra.png)
 
-As illustrated in the figure, two separate and independent user tenants, BLUE and RED, are established on shared resources (depicted in yellow), managed by the Kubernetes Infrastructure Cluster. The foundation for all virtual abstractions is the Consolidated Infrastructure (COI) in Swisscom’s data centers.
+As illustrated in the figure, two separate and independent user tenants, BLUE and RED, are established on shared resources (depicted in yellow), managed by the Kubernetes Infrastructure Cluster. The foundation for all virtual abstractions is the Consolidated Infrastructure (COI) in Swisscom's data centers.
 
 Each customer-specific environment comprises a management zone (MGMT Zone) and a workload zone.
 These zones address shared responsibilities, where Swisscom provides the Control Plane for each customer's environment (illustrated in blue and orange in the next figure).  
@@ -262,7 +290,7 @@ Through this iterative process, we've gained valuable lessons and refined our ar
 By embracing open-source and cloud native technologies, Swisscom successfully created a sovereign cloud solution, modernizing its container offering while reducing vendor lock-in and providing advanced features to customers. The new «Kubernetes Service» demonstrates the power of cloud native architectures in creating flexible, scalable, and cost-effective solutions for enterprise-grade services, all while ensuring true data sovereignty and regulatory compliance. This approach positions Swisscom as a leader in sovereign cloud solutions, offering Swiss (and European) customers a trusted alternative to global hyperscalers.
 
 
-## What’s next for your architecture? What are you looking to do next?
+## What's next for your architecture? What are you looking to do next?
 
 Building on the success of our proven reference architecture, which now supports both internal and external customer workloads in production, we're focused on expanding and enhancing our offerings:
 
@@ -280,7 +308,3 @@ Building on the success of our proven reference architecture, which now supports
   We're also investigating the possibility of hosting classical VM workloads on our Cloud Native Infrastructure Platform (CNIP), expanding the platform's use cases beyond container-based workloads and further increasing its versatility.
 
 By pursuing these initiatives, we aim to continue delivering value to our customers, drive innovation, and grow our architecture and services to meet evolving needs.
-
-## Discussion
-
-End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/87) for this architecture.
