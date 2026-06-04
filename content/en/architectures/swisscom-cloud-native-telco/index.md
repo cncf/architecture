@@ -339,4 +339,4 @@ The architecture evolved significantly from traditional imperative automation to
 
 ## Discussion
 
-End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/85) for this architecture.
+End user members may participate in the [discussion thread](https://github.com/cncf/tab/discussions/136) for this architecture.

@@ -167,4 +167,4 @@ By adopting this cloud-native stack, we have built a highly scalable and future-
 We are constantly investigating how to run our services as efficiently and economically as possible. A near-term priority is replacing our existing Ingress NGINX setup. Because the Kubernetes project has [officially announced the retirement of the ingress-nginx project](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/), we are actively evaluating alternatives—including NGINX Gateway Fabric, Envoy Gateway, and Traefik—while striving to preserve our routing behavior, TLS automation, and operational stability. Transitioning to the Gateway API is a key step in future-proofing our external traffic routing.
 
 ## Discussion
-End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/86) for this architecture.
+End user members may participate in the [discussion thread](https://github.com/cncf/tab/discussions/135) for this architecture.
