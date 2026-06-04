@@ -283,4 +283,4 @@ By pursuing these initiatives, we aim to continue delivering value to our custom
 
 ## Discussion
 
-End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/87) for this architecture.
+End user members may participate in the [discussion thread](https://github.com/cncf/tab/discussions/134) for this architecture.

@@ -304,4 +304,4 @@ A rich and seamless developer experience acts as a developer productivity multip
 
 ## Discussion
 
-End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/79) for this architecture.
+End user members may participate in the [discussion thread](https://github.com/cncf/tab/discussions/138) for this architecture.

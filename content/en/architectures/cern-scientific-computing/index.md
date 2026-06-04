@@ -279,4 +279,4 @@ A key goal of our architecture was ensure the complete functionality is availabl
 
 ## Discussion
 
-End user members may participate in the [discussion thread](https://github.com/cncf/enduser-private/discussions/84) for this architecture.
+End user members may participate in the [discussion thread](https://github.com/cncf/tab/discussions/137) for this architecture.
