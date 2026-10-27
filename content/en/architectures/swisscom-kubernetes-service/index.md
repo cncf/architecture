@@ -112,7 +112,7 @@ CloudNativePG (CNPG) manages PostgreSQL databases in cloud-native environments. 
   {{< /card >}}
 
   {{< card header="Cilium" >}}
- [![cnpg logo](https://landscape.cncf.io/logos/6b052d96054bbe311b0429d2267d60b92b1c5e6527e6646c0bf2fc06a55e2f43.svg)](https://www.cncf.io/projects/cloudnativepg/)
+ [![cilium logo](https://landscape.cncf.io/logos/6b052d96054bbe311b0429d2267d60b92b1c5e6527e6646c0bf2fc06a55e2f43.svg)](https://www.cncf.io/projects/cilium/)
   - **Using since:** 2024
   - **Current version:** v1.18.6 (SKP)
 
@@ -120,17 +120,15 @@ Cilium is an open source, cloud native solution for providing, securing, and obs
   {{< /card >}}
 
   {{< card header="Longhorn" >}}
- [![cnpg logo](https://landscape.cncf.io/logos/acd3d31cbdf0aa2ef2d695fa4a3571e6d232a96214ec33fe0b2022b9719c244c.svg)](https://longhorn.io/)
+ [![longhorn logo](https://landscape.cncf.io/logos/acd3d31cbdf0aa2ef2d695fa4a3571e6d232a96214ec33fe0b2022b9719c244c.svg)](https://www.cncf.io/projects/longhorn/)
   - **Using since:** 2024
   - **Current version:** v1.10.1 (SKP)
 
 Longhorn is a lightweight, reliable, and powerful cloud-native distributed block storage system for Kubernetes, that implements distributed block storage using containers and microservices. Longhorn creates a dedicated storage controller for each block device volume and synchronously replicates the volume across multiple replicas stored on multiple nodes. The storage controller and replicas are themselves orchestrated using Kubernetes.
   {{< /card >}}
 
-{{< /cardpane >}}
-
-  {{< card header="EnvoyGateway" >}}
- [![cnpg logo](https://landscape.cncf.io/logos/67fa9ae58fda716ed2b9e4df310790724233cf95d05738c9b999f1ec582f788f.svg)](https://gateway.envoyproxy.io/)
+  {{< card header="Envoy Gateway" >}}
+ [![envoy gateway logo](https://landscape.cncf.io/logos/67fa9ae58fda716ed2b9e4df310790724233cf95d05738c9b999f1ec582f788f.svg)](https://www.cncf.io/projects/envoy/)
   - **Using since:** 2025
   - **Current version:** v1.6.4 (SKP)
 
