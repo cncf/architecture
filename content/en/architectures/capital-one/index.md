@@ -26,6 +26,8 @@ categories:
   observability: [ "otel", "otel-collector", "opamp" ]
 
 reference_architectures:
+- Observability
+- Platform Engineering
 
 ---
 
